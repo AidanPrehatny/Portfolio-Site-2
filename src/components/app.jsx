@@ -1,28 +1,34 @@
 import React, { Component } from 'react';
 import {Route,Switch} from 'react-router-dom'
 
-import Header from './header/header'
-import Footer from './footer/footer'
-
 import Home from './home/home'
+import Projects from './projects/projects'
+import About from './about/about'
+import Blog from './blog/blog'
+import Contact from './contact/contact'
+
+
 import AuthContainer from './auth/authContainer'
 import ServeContainer from './auth/serveContainer'
 
 import ArticlesContainer from './articles/articlesContainer'
 import ArticleDetails from './articles/details/articleDetails'
 
-import Login from './auth/login'
-import Register from './auth/register'
+// import Login from './auth/login'
+// import Register from './auth/register'
 
 class App extends Component {
   render() {
     return (
 			<div>
-				<Route key="header" component={Header}/>
         <Switch>
+          {/* <Route exact path="/login" component={Login} />
+          <Route exact path="/register" component={Register} /> */}
           <Route exact path="/" component={Home} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} />
+          <Route path="/projects" component={Projects}/>
+          <Route path="/about" component={About}/>
+          <Route path="/blog" component={Blog}/>
+          <Route path="/contact" component={Contact}/>
           <Route render={()=>
             <AuthContainer key="authcontainer">
               <ServeContainer>
@@ -37,7 +43,6 @@ class App extends Component {
           }>
           </Route>
         </Switch>
-        <Route component={Footer} />
 
       </div>
     );
