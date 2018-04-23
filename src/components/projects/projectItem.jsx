@@ -11,7 +11,6 @@ class ProjectItem extends Component {
     return (
         <div className="grid-x" id="projItemContainer" style={{background: projectBackground, height: '100%', width: '100%'}}>
           <div className="cell large-5 grid-x align-middle align-center" id="projInfoContainer">
-
             <div className="cell" style={{padding: '0 0 70px 0', margin: 0}}>
               <h1 id="projHeader" style={{color: projectPrimary, marginBottom: '40px'}} className="projItem" >{projectHeader}</h1>
               <h3 id="projSubheader" style={{color: projectSecondary}} className="projItem" >{projectSubheader}</h3>
