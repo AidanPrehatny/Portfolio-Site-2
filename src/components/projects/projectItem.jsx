@@ -18,7 +18,7 @@ class ProjectItem extends Component {
               <h1 id="projHeader" style={{color: projectPrimary, marginBottom: '40px'}} className="projItem" >{projectHeader}</h1>
               <h3 id="projSubheader" style={{color: projectSecondary}} className="projItem" >{projectSubheader}</h3>
               <h4 style={{color: projectSecondary}} className="projItem" >{projectType}</h4>
-              <button style={{fontWeight: 600, color: projectPrimary, cursor: 'pointer'}} className="projItem"  href={websiteUrl}>{visitProject}</button>
+              <a style={{fontWeight: 600, color: projectPrimary, cursor: 'pointer'}} className="projItem"  href={websiteUrl}>{visitProject}</a>
               <p id="projDescription" style={{color: projectSecondary}} className="projItem" >{projectDescription}</p>
             </div>
           </div>
