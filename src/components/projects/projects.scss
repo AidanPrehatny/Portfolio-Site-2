@@ -34,9 +34,22 @@
   }
 }
 
+.projDescrip {
+  padding: 3rem !important;
+  @include breakpoint(large only) {
+    padding: 3rem !important;
+  }
+}
+
+.projectRow {
+  min-height: 100vh;
+  @include breakpoint(medium down){
+    margin: 100px 0;
+  }
+}
+
 #learnMore {
-  position: absolute;
-  bottom: 0;
+  position: relative;
   height: 85px;
   width: 85px;
   fill: none;
@@ -47,10 +60,10 @@
 }
 
 .bm-burger-button {
-  @include breakpoint(small only) {
-  right: 10% !important;
-  left: auto !important
-}
+  // @include breakpoint(small only) {
+  // right: 10% !important;
+  // left: auto !important
+// }
 }
 
 .bm-burger-button > span > span:first-child {
@@ -77,7 +90,6 @@
 }
 @include breakpoint(small only) {
   transform: scale(.75);
-  justify-content: flex-start;
 }
 }
 
