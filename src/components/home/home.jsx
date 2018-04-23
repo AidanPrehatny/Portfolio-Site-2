@@ -6,7 +6,7 @@ import { elastic as Menu } from 'react-burger-menu'
 
 class Home extends Component {
   state = {
-    videoURL: 'https://s3-us-west-1.amazonaws.com/nomnombento/swirls-homepage3.mp4'
+    videoURL: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/swirls-homepage3.mp4'
   }
 
 
@@ -29,7 +29,7 @@ class Home extends Component {
           <section id="mainPage" className="grid-x align-middle align-center">
             <h1 id="mainIntro" className="cell ">
               Hi I’m Aidan,<br></br>
-              A Front End Developer based in San Diego.
+              I'm a Front End Developer based in San Diego.
             </h1>
           </section>
       </main>

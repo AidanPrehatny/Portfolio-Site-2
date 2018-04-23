@@ -1,3 +1,7 @@
+* {
+  font-family: montserrat !important;
+}
+
 #apBackground {
  position: fixed;
  right: 0;
@@ -7,7 +11,7 @@
  z-index: -1
 }
 #mainPage {
-  padding-bottom: 40px;
+  padding: 0 40px 40px 40px;
   height: 100vh;
   width: 100vw;
   text-align: center;
@@ -21,7 +25,6 @@
    font-size: 40px;
   }
 }
-
 
 .menu-item:hover {
   opacity: 0.5
