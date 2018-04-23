@@ -3,6 +3,9 @@
   color: white;
 }
 
+.mainContent {
+  	animation: slideInLeft ease-out .7s;
+}
 #apBackground {
  position: fixed;
  right: 0;

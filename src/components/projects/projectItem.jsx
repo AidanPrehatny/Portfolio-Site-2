@@ -7,11 +7,12 @@ import ProjectRegularList from './projectRegularList'
 class ProjectItem extends Component {
 
   render() {
-    const {videoUrl, imageRows, rowHeaders, rowSubheaders, rowDescriptionsList1, rowDescriptionsList2, rowDescriptionsList3, rowDescriptionsList4, rowDescriptionsRegular1, rowDescriptionsRegular2, rowDescriptionsRegular3, rowDescriptionsRegular4, visitProject, projectPrimary, projectSecondary, projectBackground, projectHeader, projectSubheader, projectType, websiteUrl, projectDescription, projectPreview} = this.props
+    const {right, videoUrl, imageRows, rowHeaders, rowSubheaders, rowDescriptionsList1, rowDescriptionsList2, rowDescriptionsList3, rowDescriptionsList4, rowDescriptionsRegular1, rowDescriptionsRegular2, rowDescriptionsRegular3, rowDescriptionsRegular4, visitProject, projectPrimary, projectSecondary, projectBackground, projectHeader, projectSubheader, projectType, websiteUrl, projectDescription, projectPreview} = this.props
+
     return (
         <div className="grid-x" id="projItemContainer" style={{background: projectBackground, height: '100%', width: '100%'}}>
           <div className="cell large-5 grid-x align-middle align-center" id="projInfoContainer">
-            <div className="cell" style={{padding: '0 0 70px 0', margin: 0}}>
+            <div className="cell" style={{padding: '0 0 70px 0', margin: 0, animation: `slideIn${right ? 'Left' : 'Right'} ease-out 1s`}}>
               <h1 id="projHeader" style={{color: projectPrimary, marginBottom: '40px'}} className="projItem" >{projectHeader}</h1>
               <h3 id="projSubheader" style={{color: projectSecondary}} className="projItem" >{projectSubheader}</h3>
               <h4 style={{color: projectSecondary}} className="projItem" >{projectType}</h4>
@@ -23,9 +24,9 @@ class ProjectItem extends Component {
               </svg>
             </div>
           </div>
-          <div className="cell grid-x large-7 align-middle align-center" id="projImgContainer">
+          <div className="cell grid-x large-7 align-middle align-center" id="projImgContainer" style={{animation: `slideIn${right ? 'Right' : 'Left'} ease-out 1s`}}>
             {videoUrl ?
-              <video playsinline autoPlay muted loop style={{maxHeight:'800px', maxWidth: '400px', minWidth: '50px'}}>
+              <video playsInline autoPlay muted loop style={{maxHeight:'800px', maxWidth: '400px', minWidth: '50px'}}>
                 <source src={videoUrl} type="video/mp4" />
                 <source src={videoUrl} type="video/ogg" />
                 Your browser does not support the video tag.

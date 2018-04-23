@@ -20,7 +20,7 @@ class Home extends Component {
          <Link to="/blog" id="blog" className="menu-item">Blog</Link>
          <Link to="/contact" id="contact" className="menu-item">Contact</Link>
         </Menu>
-        <main id="page-wrap">
+        <main id="page-wrap" className="mainContent">
           <video autoPlay loop id="apBackground">
             <source src={this.state.videoURL} type="video/mp4" />
             <source src={this.state.videoURL} type="video/ogg" />

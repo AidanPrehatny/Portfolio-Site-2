@@ -74,16 +74,18 @@
   width: 125%;
 }
 
+.slideInProjMain {
+  animation: slideInLeft .8s ease-in;
+}
+
 #projNav {
   display: flex;
   align-items: center;
   padding-top: 25px;
   justify-content: center;
+  animation: slideInDown .8s ease-out;
   @include breakpoint(medium up) {
   position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
 }
 @include breakpoint(large only) {
   position: absolute;

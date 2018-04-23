@@ -10,6 +10,8 @@ class Projects extends Component {
       this.handleProjChange = this.handleProjChange.bind(this)
     }
   state= {
+    right: true,
+    currentProjColor: 'rgb(24, 110, 89)',
     projectNumber: 0,
     projects: [{projectBackground: `linear-gradient(0.25turn, #186E59, #1F8A70)`,
               projectHeader: 'Nearby Locations App',
@@ -109,24 +111,29 @@ class Projects extends Component {
           }]
   }
 
-  handleProjChange = (iterate) => (e) => {
+  handleProjChange = (iterate, direction, transitionColor) => (e) => {
     if (this.state.projectNumber === 6) {
     this.setState({
-      projectNumber: 0
+      projectNumber: 0,
+      right: true
     })
   } else if (this.state.projectNumber === -1) {
     this.setState({
-      projectNumber: 5
+      projectNumber: 5,
+      right: false
     })
   } else {
     this.setState({
-      projectNumber: this.state.projectNumber + iterate
+      projectNumber: this.state.projectNumber + iterate,
+      right: direction ? true : false
     })
   }
-     console.log(this.state.projectNumber)
+    this.setState({currentProjColor: this.state.projects[transitionColor].projectPrimary})
   }
 
   render() {
+
+
 
     return (
       <div>
@@ -144,21 +151,23 @@ class Projects extends Component {
            <Link to="/contact" id="contact" className="menu-item">Contact</Link>
           </Menu>
 
-          <main id="page-wrap">
+
+          <main id="page-wrap" style={{zIndex: -1, position: 'absolute',  height:'100vh', backgroundColor: this.state.currentProjColor }}>
              {this.state.projects
                .filter(p => this.state.projects
                  .indexOf(p) === this.state.projectNumber)
-                  .map((proj) =>
-                    <section key={proj.projectHeader} style={{background: proj.projectBackground, position:'relative'}}>
+                  .map((proj) => {
+                    return (
+                    <section key={proj.projectHeader} style={{background: proj.projectBackground, position:'relative', animation: `slideIn${this.state.right ? 'Right' : 'Left'} ease-out .5s`}}>
                       <div id="projNav">
                         {/* <svg className="navItem" onClick={this.handleProjChange(-2)} height="36" width="36">
                           <circle cx="18" cy="18" r="18" stroke="none" fill={proj.projectSecondary} />
                         </svg> */}
-                        <svg className="navItem" onClick={this.handleProjChange(-1)} height="36" width="36">
+                        <svg className="navItem" onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))} height="36" width="36">
                           <circle cx="18" cy="18" r="18" stroke="none" fill={proj.projectSecondary} />
                         </svg>
                         <div id="selectedNav" style={{borderRadius: '50px', backgroundImage: `url(${proj.projectLogo})`}} />
-                        <svg className="navItem" onClick={this.handleProjChange(1)} height="36" width="36">
+                        <svg className="navItem" onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))} height="36" width="36">
                           <circle cx="18" cy="18" r="18" stroke="none" fill={proj.projectSecondary} />
                         </svg>
                         {/* <svg className="navItem" onClick={this.handleProjChange(2)} height="36" width="36">
@@ -187,8 +196,10 @@ class Projects extends Component {
                         rowDescriptionsRegular3 = {proj.rowDescriptionsRegular3}
                         rowDescriptionsRegular4 = {proj.rowDescriptionsRegular4}
                         videoUrl = {proj.videoUrl}
+                        right={this.state.right}
                       />
                     </section>
+                  )}
               )}
           </main>
       </div>
