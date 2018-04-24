@@ -132,7 +132,31 @@ class Projects extends Component {
           rowDescriptionsRegular2: null,
           rowDescriptionsRegular3: ["Using Regular Expressions to detect pattern matches on every keypress of book searching. Every keypress in the search input triggers a fetch request to the book storage, the reg exp needed to update accordingly. Taking the searched results and pushing an update of my local book shelves upon categorizing newly discovered books."],
           rowDescriptionsRegular4: null
-        }]
+        },
+
+        {projectBackground: `linear-gradient(0.25turn, #015584, #09ABAE)`,
+        projectHeader: 'NomNomBento',
+        projectSubheader: 'Local Asian Food Business Website',
+        projectType: 'Paradeigm Interactive',
+        websiteUrl: 'https://www.nomnombento.com/',
+        projectDescription: "The purpose of this project was to update the website for a Pacific Beach, California, Asian cuisine establishment named NomNomBento.The client wanted a quick, responsive and interactive website which spoke to the company brand to modern web standards. Our team designed and developed a high energy and engaging experience as a result. The website provides a fluid customer experience, providing various different menu item specifications and the ability to build your own dish.",
+        projectPreview: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnommobile-min.png',
+        projectPrimary: 'white',
+        projectSecondary: '#F0AC61',
+        visitProject: 'VISIT WEBSITE',
+        projectLogo: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnom_logo.png',
+        imageRows: ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/NomnomMockup-min.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnombyob.png"],
+        rowHeaders: ['Application Properties', 'Process', 'User Considerations', 'Challenges'],
+        rowSubheaders: ["The following features were requested by the client:"],
+        rowDescriptionsList1: [],
+        rowDescriptionsList2: [],
+        rowDescriptionsList3: null,
+        rowDescriptionsList4: [],
+        rowDescriptionsRegular1: null,
+        rowDescriptionsRegular2: null,
+        rowDescriptionsRegular3: [],
+        rowDescriptionsRegular4: null
+      }]
   }
 
   handleProjChange = (iterate, direction, transitionColor) => (e) => {
