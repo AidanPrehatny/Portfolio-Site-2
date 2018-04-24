@@ -2,6 +2,7 @@ import React from 'react';
 
 const ProjectDescriptionsList = (props) => {
   // const {rowHeaders, rowSubheaders, rowDescriptionsList} = this.props
+  {console.log(props.rowDescriptionsList4)}
   return (
     <div>
       <h2 style={{fontWeight: '600'}}>{props.rowHeaders}</h2>

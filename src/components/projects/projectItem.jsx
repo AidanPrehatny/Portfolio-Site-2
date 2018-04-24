@@ -91,10 +91,11 @@ class ProjectItem extends Component {
               </div>
           </div>
 
-          {imageRows[3] ?
+
           <div className="projectRow grid-x align-center align-middle">
             <div className="cell large-6 projDescrip">
-              {rowDescriptionsList4 ?
+              {rowDescriptionsList4 || rowDescriptionsRegular4 ?
+              rowDescriptionsList4 ?
               <ProjectDescriptionsList
                 rowHeaders = {rowHeaders[3]}
                 rowSubheaders = {rowSubheaders[3]}
@@ -104,14 +105,16 @@ class ProjectItem extends Component {
               <ProjectRegularList
                 rowHeaders = {rowHeaders[3]}
                 rowDescriptionsRegular = {rowDescriptionsRegular4}
-              /> }
+              />
+              :
+              null
+            }
             </div>
+
             <div className="cell large-6">
               <img src={imageRows[3]} />
             </div>
           </div>
-          :
-          null}
 
         </div>
     )
