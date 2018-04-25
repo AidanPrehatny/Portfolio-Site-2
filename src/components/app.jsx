@@ -3,9 +3,9 @@ import {Route,Switch} from 'react-router-dom'
 
 import Home from './home/home'
 import ProjectsContainer from './projects/projectsContainer'
-import About from './about/about'
-import Blog from './blog/blog'
-import Contact from './contact/contact'
+// import About from './about/about'
+// import Blog from './blog/blog'
+// import Contact from './contact/contact'
 
 
 import AuthContainer from './auth/authContainer'
@@ -26,9 +26,9 @@ class App extends Component {
           <Route exact path="/register" component={Register} /> */}
           <Route exact path="/" component={Home} />
           <Route path="/projects" component={ProjectsContainer}/>
-          <Route path="/about" component={About}/>
+          {/* <Route path="/about" component={About}/>
           <Route path="/blog" component={Blog}/>
-          <Route path="/contact" component={Contact}/>
+          <Route path="/contact" component={Contact}/> */}
           <Route render={()=>
             <AuthContainer key="authcontainer">
               <ServeContainer>

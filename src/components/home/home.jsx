@@ -21,10 +21,8 @@ class Home extends Component {
          <Link to="/contact" id="contact" className="menu-item">Contact</Link>
         </Menu>
         <main id="page-wrap" className="mainContent">
-          <video autoPlay loop id="apBackground">
+          <video autoPlay loop playsInline id="apBackground">
             <source src={this.state.videoURL} type="video/mp4" />
-            <source src={this.state.videoURL} type="video/ogg" />
-            Your browser does not support the video tag.
           </video>
           <section id="mainPage" className="grid-x align-middle align-center">
             <h1 id="mainIntro" className="cell ">

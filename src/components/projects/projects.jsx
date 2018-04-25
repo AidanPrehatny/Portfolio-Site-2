@@ -28,7 +28,6 @@ class Projects extends Component {
         {p.videoUrl ?
           <video playsInline autoPlay muted loop id="vidPreview" >
             <source src={p.videoUrl} type="video/mp4" />
-            // <source src={p.videoUrl} type="video/ogg" />
             Your browser does not support the video tag.
           </video> :
           <img alt={`${p.projectHeader}img${i}`} style={{maxHeight: '900px', maxWidth: '900px'}} className="projImg cell" src={p.projectPreview} />}
@@ -43,7 +42,7 @@ class Projects extends Component {
                 rowSubheader = {p.rowSubheader[index]}
                 rowDescription = {descrip[1]}
                 rowImage = {p.imageRows[index]}
-                rowAlternate = {index%2 == 0 ? 'even' : 'odd'}
+                rowAlternate = {index%2 === 0 ? 'even' : 'odd'}
                 key={`descrip${descrip[0]}`}
                 rowNumber = {index}
                 contentAddition = {p.contentAddition ? p.contentAddition[index] : false}
