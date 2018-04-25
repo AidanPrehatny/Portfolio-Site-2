@@ -38,7 +38,7 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular2: ["When properties in the model get updated, so does the UI. In this case, the affiliates button filtering would communicate with its parent component to filter the list of items and then the component would listen for the change to change the color of the button."],
         rowDescriptionsRegular3: ["One of the user challenges in one of the site's features was within the brewery location maps component. The map begins by fetching the data of the first ten nearest geospatial brewery locations and then adds additional locations after the first ten load in to improve user load times when accessing the brewery map. \n \n This is important because loading in all locations at once increases the map’s rendering time and prevent  users from accessing the app altogether, which is far worse than the given alternative."],
         videoUrl: "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/sdbeerGif.mp4",
-        contentAddition: "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Databindvid.mp4"
+        contentAddition: ["","","https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/affiliatesNav2way.mp4",""]
       },
 
       {projectBackground: `linear-gradient(0.25turn, #186E59, #1F8A70)`,
@@ -112,20 +112,6 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular2: ["Using Regular Expressions to detect pattern matches on every keypress of book searching. Every keypress in the search input triggers a fetch request to the book storage, the reg exp needed to update accordingly. Taking the searched results and pushing an update of my local book shelves upon categorizing newly discovered books."],
         rowDescriptionsRegular3: ""
       },
-
-      // rowDescriptionsList: [
-      //     {l1: "Categorizing: Add Books from an online repository to your categories list and save them for later viewing, pushing changes to backend store with tokenizer.",
-      //      l2: "React Routing: Small List of reviews of restaraunts within Manhattan, New York, retrieving data of restaraunts, neighborhood, and google map markers with xhr api requests.",
-      //      l3: "Book Repository: Retrieves data including restaraunt address, hours, cusinie type, pictures, and review.",
-      //      l4: "Live Search Filter: Initializes a google map and places restaraunt map markers onto the map."},
-      //     {l1: "Ensuring that the search box updates its books results as the user types in each letter",
-      //     l2: "Simple User interface to navigate the book tracking environment by keeping a maximum of three books per row on large screens",
-      //     l3: "Search button becomes Home button instead of using a back button, the user can navigate to the search page by using the /search url extension",
-      //     l4: "The user’s search input is cached when returning to home page in case they want to continue their search where they left off" },
-      //     "",
-      //     {l1: "A major takeaway was improving my methods of overviewing documentation. The foursquare API was a bit difficult for me to understand in how to format my fetch request, but upon further research, I figured out how to give my fetch calls a more readable and organized format."},
-      //     {l2: "I Encoded the URI using encodeURI() to convert all characters that are not permissible in a URL and turn them into allowable units; those query strings are required by the places API parameters."}
-      // ],
 
       {projectBackground: `#252831`,
         projectHeader: 'Restaraunt Reviews App',

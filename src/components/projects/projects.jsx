@@ -8,7 +8,6 @@ class Projects extends Component {
   render() {
 
     const {p, i, right} = this.props
-    console.log(Object.entries(p))
     let arrayConversion= Object.entries(p)
     return (
       <div className="grid-x" id="projItemContainer" style={{background: p.projectBackground, height: '100%', width: '100%'}}>
@@ -27,7 +26,7 @@ class Projects extends Component {
       </div>
       <div className="cell grid-x large-7 align-middle align-center" id="projImgContainer" style={{animation: `slideIn${right ? 'Right' : 'Left'} ease-out 1s`}}>
         {p.videoUrl ?
-          <video playsInline autoPlay muted loop style={{maxHeight:'800px', maxWidth: '400px', minWidth: '50px'}}>
+          <video playsInline autoPlay muted loop id="vidPreview" >
             <source src={p.videoUrl} type="video/mp4" />
             // <source src={p.videoUrl} type="video/ogg" />
             Your browser does not support the video tag.
@@ -44,9 +43,10 @@ class Projects extends Component {
                 rowSubheader = {p.rowSubheader[index]}
                 rowDescription = {descrip[1]}
                 rowImage = {p.imageRows[index]}
-                rowalternate = {index%2 == 0 ? 'even' : 'odd'}
+                rowAlternate = {index%2 == 0 ? 'even' : 'odd'}
                 key={`descrip${descrip[0]}`}
                 rowNumber = {index}
+                contentAddition = {p.contentAddition ? p.contentAddition[index] : false}
               />
 
         )}
