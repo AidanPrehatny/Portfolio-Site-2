@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Route,Switch} from 'react-router-dom'
 
 import Home from './home/home'
-import Projects from './projects/projects'
+import ProjectsContainer from './projects/projectsContainer'
 import About from './about/about'
 import Blog from './blog/blog'
 import Contact from './contact/contact'
@@ -25,7 +25,7 @@ class App extends Component {
           {/* <Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} /> */}
           <Route exact path="/" component={Home} />
-          <Route path="/projects" component={Projects}/>
+          <Route path="/projects" component={ProjectsContainer}/>
           <Route path="/about" component={About}/>
           <Route path="/blog" component={Blog}/>
           <Route path="/contact" component={Contact}/>

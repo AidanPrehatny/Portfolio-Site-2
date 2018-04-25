@@ -6,7 +6,7 @@ import { elastic as Menu } from 'react-burger-menu'
 
 class Home extends Component {
   state = {
-    videoURL: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/swirls-homepage3.mp4'
+    videoURL: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/swirls-OPTIMIZED.mp4'
   }
 
 

@@ -2,9 +2,19 @@
   padding: 15px 30px 15px 0;
   margin: 0
 }
+.projItem:nth-child(3) {
+  padding: 0 30px 45px 0;
+  margin: 0
+}
+.projItem:nth-child(5) {
+  padding: 45px 30px 15px 0;
+  margin: 0
+}
 #projHeader {
   font-weight: 700;
-  font-size: 45px
+  font-size: 45px;
+  padding: 0 !important;
+  margin-bottom: 30px !important;
 }
 
 #projSubheader {
@@ -24,8 +34,8 @@
 
 #projImgContainer {
   @include breakpoint(large only) {
-  height: 100vh;
-}
+    height: 100vh;
+  }
 }
 #projInfoContainer {
   @include breakpoint(large up) {
@@ -63,9 +73,16 @@
   // @include breakpoint(small only) {
   // right: 10% !important;
   // left: auto !important
-// }
+  // }
 }
 
+img {
+  max-width: 500px;
+  @include breakpoint(medium up) {
+    display: flex;
+    margin: auto;
+  }
+}
 .bm-burger-button > span > span:first-child {
   width: 150%;
 }
@@ -77,7 +94,9 @@
 .slideInProjMain {
   animation: slideInLeft .8s ease-in;
 }
-
+#flippedArrow {
+  filter: invert(100%)
+}
 #projNav {
   display: flex;
   align-items: center;
@@ -85,14 +104,12 @@
   justify-content: center;
   animation: slideInDown .8s ease-out;
   @include breakpoint(medium up) {
-  position: relative;
-}
-@include breakpoint(large only) {
-  position: absolute;
-}
-@include breakpoint(small only) {
-  transform: scale(.75);
-}
+    position: relative;
+    justify-content: center;
+  }
+  @include breakpoint(small only) {
+    transform: scale(.75);
+  }
 }
 
 #selectedNav {
