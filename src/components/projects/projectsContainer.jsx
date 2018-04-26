@@ -101,7 +101,7 @@ class ProjectsContainer extends Component {
         projectSecondary: 'white',
         visitProject: 'VISIT APP',
         projectLogo: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/puuoQfT.png',
-        imageRows: [null, null, "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/booksAPI.png"],
+        imageRows: ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/book+track+app.png", null, "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/booksAPI.png"],
         rowHeader: ['Application Properties', 'Challenges', 'User Considerations', 'Value Proposition'],
         rowSubheader: ["Features of my app include:", "User Centered development considerations were as follows:"],
         rowDescriptionsList0: ["Categorizing: Add Books from an online repository to your categories list and save them for later viewing, pushing changes to backend store with tokenizer.","React Routing:   Small List of reviews of restaraunts within Manhattan, New York, retrieving data of restaraunts, neighborhood, and google map markers with xhr api requests.", "Book Repository: Retrieves data including restaraunt address, hours, cusinie type, pictures, and review.", "Live Search Filter: Initializes a google map and places restaraunt map markers onto the map."],
