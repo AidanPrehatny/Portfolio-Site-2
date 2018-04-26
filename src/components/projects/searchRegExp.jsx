@@ -3,35 +3,49 @@ import escapeRegExp from 'escape-string-regexp';
 
 class SearchRegExp extends Component {
   state = {
-    checked: false,
       inputChar: '',
       bookNumbers: [{
-        bookImg: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Poetry.jpg'
+        bookImg: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Poetry.jpg',
+        bookName: 'The Poetry of A.K. Ramanuian'
       }, {
-        bookImg: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/lakeOfDark.jpg'
+        bookImg: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/lakeOfDark.jpg',
+        bookName: 'The Lake Of Darkness'
       }, {
-        bookImg: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/VirtualReality.jpg'
+        bookImg: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/VirtualReality.jpg',
+        bookName: 'Virtual Reality'
       }]
+  }
+  inputDetect = (query) => {
+    this.setState({ inputChar: query })
   }
 
   render() {
-    const { inputChar, checked, bookNumbers } = this.state
+    const { inputChar, bookNumbers } = this.state
     let bookInfo = null;
     if (inputChar)  {
       const match = new RegExp(escapeRegExp(inputChar), 'i')    // reg exp finds pattern to match side pane places with search box
       bookInfo = bookNumbers.filter(
-        (book) => match.test(book[0])
-      )
+        (book) => {
+          console.log(book.bookName)
+          return (
+          match.test(book.bookName)
+      )})
     } else {
       bookInfo = bookNumbers
     }
 
     return (
-      <div className="grid-x ">
+      <div className="grid-x align-center align-middle">
 
-        <input onClick={() => this.setState({checked: !checked})} type="checkbox" checked={checked} id="nav-trigger" className="nav-trigger" />
+        <input
+            type="text"
+            placeholder="Filter Through books"
+            value={inputChar}
+            onChange={(event) => {
+              this.inputDetect(event.target.value)}}
+            />
         {bookInfo.map((book, i) =>
-          <img alt={`book${i}`} src={book.bookImg} className="cell large-3 medium-4 small-3" />
+          <img key={`book${i}`} alt={`book${i}`} src={book.bookImg} className="cell large-3 medium-4 small-5" style={{height: '220px', padding: '5px 2px '}}/>
         )}
       </div>
     )

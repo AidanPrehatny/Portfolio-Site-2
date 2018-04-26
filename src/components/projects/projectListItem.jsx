@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AwesomeSlider from 'react-awesome-slider';
-import 'react-awesome-slider/dist/styles.css';
+import '../../styling/slide-styles.scss';
 import InstaCardContainer from './instacard/instaCardContainer';
 import SearchRegExp from './searchRegExp'
 
@@ -42,7 +42,7 @@ class ProjectListItem extends Component {
       <p>{rowDescription}</p>
      }
      {contentAddition ?  (typeof contentAddition === 'string') ?
-     <img alt={contentAddition.substring(4,20)} src={contentAddition} />
+     <img style={{maxHeight: '490px'}} alt={contentAddition.substring(4,20)} src={contentAddition} />
      :
      null
      :

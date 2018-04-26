@@ -10,9 +10,9 @@
   background: $teal;
   max-width: 500px;
   margin: auto;
+  transform: scale(.8);
   @include breakpoint(medium down) {
-    transform: scale(.7);
-
+  transform: scale(.7);
   }
 }
 .cardHead {

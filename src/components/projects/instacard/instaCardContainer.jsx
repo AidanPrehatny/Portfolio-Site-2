@@ -51,14 +51,6 @@ class InstaCardContainer extends Component {
     return (
       <div className="cell text-center">
         <div className="instaCard grid-x align-middle align-center">
-          {/* <h1 className="cardHead">Instagram Post Mockup Generator</h1> */}
-            {/* <Link to="/freebies/profile">
-              <svg id="navArrow" viewBox="0 0 1000 1000">
-                <g>
-                  <path d="M216.6,75.5L282.1,10l501.3,490.6L283.1,990l-64.8-64.8l429.8-422.5L216.6,75.5z"/>
-                </g>
-              </svg>
-            </Link> */}
           <InstaCard
             onDrop={this.onDrop}
             imagePreviewUrl={imagePreviewUrl}
