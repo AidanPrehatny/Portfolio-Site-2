@@ -161,7 +161,7 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular1: ['The Website branding and animation features needed to be interesting but also simple and lend to the user experience in accessible interfacing.Single Page web applications are the future of the web. The instantaneous load-in on the click of each and every page of the website, rather then having to wait for the server to communicate a new request, is what can make a website really stand out by being a vital upgrade to the user experience.'],
         rowDescriptionsRegular2: ["React has popularized functional programming in JavaScript. This has led to giant frameworks adopting the Component-based UI pattern that React uses. This project uses declarative programming approaches so that logical computation is executed without full expression of control flow."],
         rowDescriptionsRegular3: "",
-        contentAddition: ["", "", "", ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnomcodebyob.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnomByob.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnomByob.png"]]
+        contentAddition: ["", "", "", ["https://i.imgur.com/5YllJVQ.jpg", "https://i.imgur.com/G0HFEVM.png", "https://i.imgur.com/94s2B3e.jpg"]]
       }]
     }
 
