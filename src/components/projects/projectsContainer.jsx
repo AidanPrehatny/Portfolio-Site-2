@@ -111,7 +111,8 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular0: "",
         rowDescriptionsRegular1: "",
         rowDescriptionsRegular2: ["Using Regular Expressions to detect pattern matches on every keypress of book searching. Every keypress in the search input triggers a fetch request to the book storage, the reg exp needed to update accordingly. Taking the searched results and pushing an update of my local book shelves upon categorizing newly discovered books."],
-        rowDescriptionsRegular3: ""
+        rowDescriptionsRegular3: "",
+        contentAddition: ["",["https://i.imgur.com/5YllJVQ.jpg","https://i.imgur.com/G0HFEVM.png", "https://i.imgur.com/94s2B3e.jpg"],"",""]
       },
 
       {projectBackground: `#252831`,

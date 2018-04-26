@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-
+import InstaCardContainer from './instacard/instaCardContainer';
 
 
 class ProjectListItem extends Component {
@@ -16,12 +16,16 @@ class ProjectListItem extends Component {
  }
  render() {
   const {rowHeader, rowSubheader, rowDescription, rowNumber, rowAlternate, rowImage, contentAddition} = this.state
-  console.log(typeof contentAddition)
+  console.log(rowImage)
   return (
    <div className="projectRow grid-x align-center align-middle">
     {rowAlternate === 'even' ?
     <div className="cell large-6">
+      {rowImage === "" ?
+        <InstaCardContainer />
+        :
      <img alt={`${rowHeader}img${[rowNumber]}`} src={rowImage} />
+   }
     </div>
     :
     null}
@@ -38,11 +42,11 @@ class ProjectListItem extends Component {
       <p>{rowDescription}</p>
      }
      {contentAddition ?  (typeof contentAddition === 'string') ?
-     <img src={contentAddition} />
+     <img alt={contentAddition.substring(5,1)} src={contentAddition} />
      :
      null
      :
-     null  // TODO: the other type of contentAddition will likely be a component that takes in props to define dropzone for gander and byobcontainer for (nomnombyob)
+     null
       }
     </div>
     {rowAlternate === 'odd' ?
@@ -56,7 +60,9 @@ class ProjectListItem extends Component {
       </div>
       :
     <div className="cell large-6">
+
      <img alt={`${rowHeader}img${[rowNumber]}`} src={rowImage} />
+
     </div>
     :
     null}

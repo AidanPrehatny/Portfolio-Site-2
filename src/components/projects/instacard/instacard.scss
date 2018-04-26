@@ -1,0 +1,172 @@
+#navArrow {
+  width: 65px;
+  position: fixed;
+  left: 93%;
+  top: 50%;
+  fill: white;
+  cursor:pointer
+}
+.instaCard {
+  background: $teal;
+  width: 500px;
+}
+.cardHead {
+  font-weight: 900;
+  padding: 7rem;
+}
+.cardMain {
+  background: white;
+  max-width: 640px;
+  min-width: 366px;
+  border: solid 2px lightgrey;
+  border-radius: 4.5px;
+}
+.cardHead {
+  padding: 1.3rem;
+}
+.clientImg {
+  border-radius: 50%;
+  background: $teal;
+  width: 60px;
+  height: 60px;
+  overflow:hidden;
+  padding: 0 !important;
+}
+.profMsg {
+  line-height: 1;
+  margin: auto;
+  padding-top: 5px;
+  color: white;
+  cursor: pointer;
+}
+.cardPhoto {
+  overflow: hidden;
+  min-height: 340px;
+  min-width: 260px;
+  max-height: 1080px;
+  max-width: 1080px;
+  @include breakpoint(medium up) {
+    min-height: 470px;
+  }
+}
+.cardnoImg {
+  background: #FFCEC3;
+}
+input[type=file] {
+    background-color: none;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+.pulseDrag {
+	animation: bounceIn 1s ease-in-out infinite;
+}
+.acceptClassName {
+  animation: rubberBand 1s;
+}
+.pulseReject {
+	animation: shake 1s infinite;
+}
+.inputBtn:focus {
+  outline: 0;
+  cursor: pointer;
+}
+.cardImg {
+  background: none;
+}
+.uploadBtn {
+  padding-top: 0;
+  @include breakpoint(small only) {
+  padding-top: 2.1rem;
+}
+}
+
+section > input {
+  padding: 0 .2rem;
+  font-weight:600;
+  color: $ultra;
+}
+.clientName {
+  border: none;
+  color: black;
+  font-size: 125%;
+  font-weight: 700;
+  box-shadow: none;
+  @include breakpoint(small only) {
+    text-decoration: underline;
+  }
+}
+.clientNameProf {
+  border: none;
+  color: black;
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 200;
+  height: auto;
+  font-kerning:none;
+  box-shadow: none;
+  @include breakpoint(small only) {
+    text-decoration: underline;
+  }
+}
+.clientName::placeholder {
+  color:$ultra
+}
+.iconsmi {
+  width: 34px;
+  fill: none;
+  stroke:#000000;
+  stroke-width:9;
+  stroke-miterlimit:10;
+  margin-top: -1px;
+}
+.smi {
+  padding-bottom: .4rem;
+}
+.iconHeart {
+  height: 27px;
+  width: 27px;
+  margin-right: .5rem;
+  cursor: pointer;
+  stroke-width:2;
+  stroke: black;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#likeCount {
+  user-select: none;
+}
+#clientName {
+  user-select: none;
+}
+.lowerCard {
+padding: .5rem 0rem .5rem 1rem
+}
+section > h5 {
+  font-weight: 700;
+}
+.cardCapName {
+  color: black;
+  margin: auto 0;
+  font-weight: 600;
+}
+.cardCaption {
+  color: black;
+  font-size: 120%;
+  min-width: 65%;
+  font-weight: 200;
+  border: 0;
+  margin-left: 1rem;
+  outline: none;
+}
+.comment {
+ padding: 2rem 2rem 0 0;
+}
+.commentbox {
+   border: 0;
+   box-shadow: 0
+}
