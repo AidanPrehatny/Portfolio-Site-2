@@ -112,7 +112,7 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular1: "",
         rowDescriptionsRegular2: ["Using Regular Expressions to detect pattern matches on every keypress of book searching. Every keypress in the search input triggers a fetch request to the book storage, the reg exp needed to update accordingly. Taking the searched results and pushing an update of my local book shelves upon categorizing newly discovered books."],
         rowDescriptionsRegular3: "",
-        contentAddition: ["",["https://i.imgur.com/SguSJkm.png","https://i.imgur.com/0t2t0DS.png", "https://i.imgur.com/94s2B3e.jpg"],"",""]
+        contentAddition: ["",["https://i.imgur.com/SguSJkm.png","https://i.imgur.com/0t2t0DS.png", "https://i.imgur.com/9iFVIa9.png"],"",""]
       },
 
       {projectBackground: `#252831`,
@@ -214,7 +214,7 @@ class ProjectsContainer extends Component {
                       key={proj.projectHeader}
                       style={{background: proj.projectBackground, position:'relative', animation: `slideIn${this.state.right ? 'Right' : 'Left'} ease-out .5s`}}>
                       <div id="projNav">
-                        <svg className="navItem"
+                        <svg className="navItem pulsate"
                           onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}
                           height="36" width="36">
                           <polygon points="0 17 17.15 0 18.63 1.41 2.38 17.71 18.69 34 17.14 35.41 0 18.41 0 17"
@@ -222,7 +222,7 @@ class ProjectsContainer extends Component {
                           />
                         </svg>
                         <div id="selectedNav" style={{borderRadius: '50px', backgroundImage: `url(${proj.projectLogo})`}} />
-                        <svg className="navItem" onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))} height="36" width="36">
+                        <svg className="navItem pulsate" onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))} height="36" width="36">
                           <polygon points="27.051,17 9.905,0 8.417,1.414 24.674,17.707 8.363,34 9.914,35.414 27.051,18.414"
                             fill={proj.projectSecondary} stroke={proj.projectSecondary} style={{strokeWidth: '3'}}
                           />

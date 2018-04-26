@@ -25,6 +25,19 @@
 #projDescription {
   font-size: 16px;
 }
+#lazyLoadin {
+  animation: fadeIn 1s ease-in;
+}
+.lazySlideInLeft {
+  animation: slideInLeft 1s ease-in;
+}
+.pulsate {
+  animation: bounceIn 2s infinite;
+  animation-direction: alternate-reverse;
+}
+.lazySlideInRight {
+  animation: slideInRight 1s ease-in;
+}
 #projItemContainer {
   padding: 0 5rem;
   @include breakpoint(small only) {
@@ -52,7 +65,7 @@
 }
 
 .projectRow {
-  min-height: 100vh;
+  min-height: 200vh;
   min-width: 80vw;
   @include breakpoint(medium down){
     margin: 100px 0;
@@ -101,7 +114,7 @@ img {
 #projNav {
   display: flex;
   align-items: center;
-  padding-top: 25px;
+  padding: 12px;
   justify-content: center;
   animation: slideInDown .8s ease-out;
   @include breakpoint(medium up) {

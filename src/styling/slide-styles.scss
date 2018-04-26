@@ -20,16 +20,16 @@
     --organic-arrow-thickness: 4px;
     --organic-arrow-height: 40px;
     --slider-height-percentage: 60%;
-    --loader-bar-color: #FFF;
+    --loader-bar-color: #000;
     --loader-bar-height: 6px;
     --control-button-width: 10%;
     --control-button-height: 25%;
-    --control-button-opacity: 0.9;
+    --control-button-opacity: 0.65;
     --control-button-hover-opacity: 0.95;
     --control-button-background: transparent;
     --transition-bezier: cubic-bezier(0.5, 0.075, 0.25, 0.95);
     --slider-transition-duration: 575ms;
-    --organic-arrow-color: #FFF;
+    --organic-arrow-color: #000;
     --organic-arrow-border-radius: 0;
     --control-bullet-color: #FFF;
     --control-bullet-active-color: #FFF;
@@ -102,8 +102,8 @@
 
 .aws-sld__content>img,
 .aws-sld__content>video {
-    -o-object-fit: cover;
-    object-fit: cover;
+    -o-object-fit: contain;
+    object-fit: contain;
     width: 100%;
     height: 100%;
     position: absolute;

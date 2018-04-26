@@ -10,7 +10,7 @@ class Projects extends Component {
     const {p, i, right} = this.props
     let arrayConversion= Object.entries(p)
     return (
-      <div className="grid-x" id="projItemContainer" style={{background: p.projectBackground, height: '100%', width: '100%'}}>
+      <div className="grid-x animated fadeIn" id="projItemContainer" style={{background: p.projectBackground, height: '100%', width: '100%'}}>
         <div className="cell large-5 grid-x align-middle align-center" id="projInfoContainer">
           <div className="cell" style={{padding: '0 0 70px 0', margin: 0, animation: `slideIn${right ? 'Left' : 'Right'} ease-out 1s`}}>
             <h1 id="projHeader" style={{color: p.projectPrimary}} className="projItem" >{p.projectHeader}</h1>
