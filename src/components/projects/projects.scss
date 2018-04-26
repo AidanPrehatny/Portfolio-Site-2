@@ -53,6 +53,7 @@
 
 .projectRow {
   min-height: 100vh;
+  min-width: 80vw;
   @include breakpoint(medium down){
     margin: 100px 0;
   }

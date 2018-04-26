@@ -8,7 +8,12 @@
 }
 .instaCard {
   background: $teal;
-  width: 500px;
+  max-width: 500px;
+  margin: auto;
+  @include breakpoint(medium down) {
+    transform: scale(.7);
+
+  }
 }
 .cardHead {
   font-weight: 900;
@@ -82,7 +87,7 @@ input[type=file] {
 .uploadBtn {
   padding-top: 0;
   @include breakpoint(small only) {
-  padding-top: 2.1rem;
+
 }
 }
 

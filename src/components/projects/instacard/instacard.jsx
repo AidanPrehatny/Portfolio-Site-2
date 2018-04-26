@@ -44,14 +44,14 @@ function InstaCard (props) {
                   <img alt="dragNdrop" className={gucci + props.imagePreviewUrl.substring(0,1)} src={props.imagePreviewUrl} width="100%" height="100%"/>
                 ):(
                   <div>
-                    {/* <AwesomeButton bubbles size="large" type="primary">
+                    <AwesomeButton bubbles size="large" type="primary">
                     <input
                       style={{background: 'none', zIndex: '1000', border: 'none', color: 'none', fontSize: '0', position: 'absolute', overflow:'hidden', height: '110px', width: '200px', marginTop: '-40px', marginLeft: '-100px'}}
                       className="inputBtn"
                       type='file'
                       onChange={props.handleImageChange} />
-                      <p className="uploadBtn" style={{margin: '0', fontSize: '125%', color: 'white', position: 'relative'}}> Upload Image !</p>
-                    </AwesomeButton> */}
+                      <p className="uploadBtn" style={{margin: '0', color: 'white', position: 'relative'}}> Upload Image !</p>
+                    </AwesomeButton>
                     <h4 style={{paddingTop: '.5rem', userSelect: 'none'}}>
                       Or... drag from a folder!
                     </h4>

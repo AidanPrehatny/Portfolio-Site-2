@@ -101,7 +101,7 @@ class ProjectsContainer extends Component {
         projectSecondary: '#8F40B3',
         visitProject: 'VISIT APP',
         projectLogo: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/puuoQfT.png',
-        imageRows: [],
+        imageRows: [null, null, "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/booksAPI.png"],
         rowHeader: ['Application Properties', 'Challenges', 'User Considerations', 'Value Proposition'],
         rowSubheader: ["Features of my app include:", "User Centered development considerations were as follows:"],
         rowDescriptionsList0: ["Categorizing: Add Books from an online repository to your categories list and save them for later viewing, pushing changes to backend store with tokenizer.","React Routing:   Small List of reviews of restaraunts within Manhattan, New York, retrieving data of restaraunts, neighborhood, and google map markers with xhr api requests.", "Book Repository: Retrieves data including restaraunt address, hours, cusinie type, pictures, and review.", "Live Search Filter: Initializes a google map and places restaraunt map markers onto the map."],
@@ -112,7 +112,7 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular1: "",
         rowDescriptionsRegular2: ["Using Regular Expressions to detect pattern matches on every keypress of book searching. Every keypress in the search input triggers a fetch request to the book storage, the reg exp needed to update accordingly. Taking the searched results and pushing an update of my local book shelves upon categorizing newly discovered books."],
         rowDescriptionsRegular3: "",
-        contentAddition: ["",["https://i.imgur.com/5YllJVQ.jpg","https://i.imgur.com/G0HFEVM.png", "https://i.imgur.com/94s2B3e.jpg"],"",""]
+        contentAddition: ["",["https://i.imgur.com/SguSJkm.png","https://i.imgur.com/0t2t0DS.png", "https://i.imgur.com/94s2B3e.jpg"],"",""]
       },
 
       {projectBackground: `#252831`,

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
 import InstaCardContainer from './instacard/instaCardContainer';
-
+import SearchRegExp from './searchRegExp'
 
 class ProjectListItem extends Component {
  state = {
@@ -20,7 +20,7 @@ class ProjectListItem extends Component {
   return (
    <div className="projectRow grid-x align-center align-middle">
     {rowAlternate === 'even' ?
-    <div className="cell large-6">
+    <div className="cell large-6 medium 12 small 12">
       {rowImage === "" ?
         <InstaCardContainer />
         :
@@ -42,7 +42,7 @@ class ProjectListItem extends Component {
       <p>{rowDescription}</p>
      }
      {contentAddition ?  (typeof contentAddition === 'string') ?
-     <img alt={contentAddition.substring(5,1)} src={contentAddition} />
+     <img alt={contentAddition.substring(4,20)} src={contentAddition} />
      :
      null
      :
@@ -60,9 +60,11 @@ class ProjectListItem extends Component {
       </div>
       :
     <div className="cell large-6">
-
+      {rowImage === undefined ?
+        <SearchRegExp />
+        :
      <img alt={`${rowHeader}img${[rowNumber]}`} src={rowImage} />
-
+    }
     </div>
     :
     null}
@@ -72,9 +74,3 @@ class ProjectListItem extends Component {
  }
 }
 export default  ProjectListItem
-
-{/* <video playsInline autoPlay muted loop id="contentAdditionVid" className="cell">
- <source src={contentAddition} type="video/mp4" />
- Your browser does not support the video tag.
-</video>
-: */}

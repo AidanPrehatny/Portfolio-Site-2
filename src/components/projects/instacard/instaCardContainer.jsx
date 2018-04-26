@@ -49,7 +49,7 @@ class InstaCardContainer extends Component {
 
     const {name, caption, liked, imagePreviewUrl, imageProfileUrl} = this.state
     return (
-      <div className="cell text-center" style={{maxHeight: '550px', maxWidth: '500px'}}>
+      <div className="cell text-center">
         <div className="instaCard grid-x align-middle align-center">
           {/* <h1 className="cardHead">Instagram Post Mockup Generator</h1> */}
             {/* <Link to="/freebies/profile">
