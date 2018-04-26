@@ -38,7 +38,7 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular2: ["When properties in the model get updated, so does the UI. In this case, the affiliates button filtering would communicate with its parent component to filter the list of items and then the component would listen for the change to change the color of the button."],
         rowDescriptionsRegular3: ["One of the user challenges in one of the site's features was within the brewery location maps component. The map begins by fetching the data of the first ten nearest geospatial brewery locations and then adds additional locations after the first ten load in to improve user load times when accessing the brewery map. \n \n This is important because loading in all locations at once increases the map’s rendering time and prevent  users from accessing the app altogether, which is far worse than the given alternative."],
         videoUrl: "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/sdbeerGif.mp4",
-        contentAddition: ["","","https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/affiliatesNav2way.mp4",""]
+        contentAddition: ["","","https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/HOCcarbon.gif",""]
       },
 
       {projectBackground: `linear-gradient(0.25turn, #186E59, #1F8A70)`,
@@ -52,7 +52,7 @@ class ProjectsContainer extends Component {
         projectSecondary: 'white',
         visitProject: 'VISIT APP',
         projectLogo: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/P2gOsHx.png',
-        imageRows: ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/zlwDCTf.png","https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/HOc.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Symbol+1+%E2%80%93+1.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/foursquare+request.png" ],
+        imageRows: ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/locations-nearby.gif","https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/HOc.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Symbol+1+%E2%80%93+1.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/foursquare+request.png" ],
         rowHeader: ['Application Properties', 'Higher Order Components', 'Challenges', 'Solutions'],
         rowSubheader: ["These are some of the features i developed:", "A higher-order component (HOC) is an advanced technique in React for reusing component logic."],
         rowDescriptionsList0: ["Nearby Locations: The app takes your current location and retrieves 8 nearby places to your Lat/Lng coordinates", "FourSquare API: The map uses Foursquare's Places API to retrieve venue locations and then find further information on each location", "Recompose: Recompose is a React utility belt for function components and higher-order components.", "Venue Location List:   View an updated list of locations near you and filter locations and their corresponding marker with the search function"],
@@ -62,7 +62,8 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular0: "",
         rowDescriptionsRegular1: ["Concretely, a higher-order component is a function that takes a component and returns a new component. Whereas a component transforms props into UI, a higher-order component transforms a component into another component. The HOC isn’t concerned with how or why the data is used, and the wrapped component isn’t concerned with where the data came from."],
         rowDescriptionsRegular2: "",
-        rowDescriptionsRegular3: ""
+        rowDescriptionsRegular3: "",
+        contentAddition: ["", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/HOCcarbon.png", "", ""]
       },
 
       {projectBackground: `linear-gradient(0.25turn, #300094, #17BEAC)`,
@@ -86,7 +87,7 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular0: "",
         rowDescriptionsRegular1: ["This integrated development env ironment is one in which many processes and tools were coordinated to provide my team and I an orderly interface to build out this full feature site. This tech stack is what made our development  process possible, from writing to testing to packaging our code for use."],
         rowDescriptionsRegular2: ["This mockup generator was a small feature to the site utilizing a drag and drop addition for the user. I used a dropzone react library and added an animation on the Callback prop \"onDrop Accepted\" and \"onDropRejected\" as a user indication of their picture's drop status. "],
-        rowDescriptionsRegular3: ['placeholder']
+        rowDescriptionsRegular3: ""
       },
 
       {projectBackground: `linear-gradient(0.25turn, #4F4CB1, #300094)`,
@@ -134,7 +135,7 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular0: "",
         rowDescriptionsRegular1: "",
         rowDescriptionsRegular2: ["JavaScript frameworks and Single Page Apps are the way to build today, but its important to understand where it all came from. In 2005, Jesse James Garrett coined the term AJAX to mean “Asynchronous Javascript and XML”. This is essentially the technique of using XMLHTTPRequest to fetch data and then modify the current page. \n In this application, i apply these fundamentals of fetching data for things such as neighborhoods, restaurants, and cuisines with proper error handling." ],
-        rowDescriptionsRegular3: ['placeholder']
+        rowDescriptionsRegular3: ""
       },
 
 
@@ -152,14 +153,15 @@ class ProjectsContainer extends Component {
         imageRows: ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/NomnomMockup-min.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnombyob.png"],
         rowHeader: ['Application Properties', 'Process', 'User Considerations', 'Challenges'],
         rowSubheader: ["The following features were requested by the client:"],
-        rowDescriptionsList0: ['place'],
-        rowDescriptionsList1: ['place'],
+        rowDescriptionsList0: ['Build your own Bento box item selection menu, Menu items with ingredients listings for each dish, Company instagram feeds onto about page,Location page provides map with retail store location'],
+        rowDescriptionsList1: "",
         rowDescriptionsList2: "",
-        rowDescriptionsList3: ['place'],
+        rowDescriptionsList3: ["The Build your Own Bento ordering application required adding a list of ingredients to a Bento Selection list, the next and back buttons needed to function correctly and not appear under the first and last ordering step.", "Animation features using animate.css library had issues: Animations using the animate.css library which used a transition on page load in addition to a hover animation would replay their on-page-load animation when the mouse would leave the hover area of the element, requiring a workaround with a css transform shorthand", "The ingredients list under each menu item header needed to use responsive CSS masonry and use a different layout for mobile."],
         rowDescriptionsRegular0: "",
-        rowDescriptionsRegular1: "",
-        rowDescriptionsRegular2: ['place'],
-        rowDescriptionsRegular3: ""
+        rowDescriptionsRegular1: ['The Website branding and animation features needed to be interesting but also simple and lend to the user experience in accessible interfacing.Single Page web applications are the future of the web. The instantaneous load-in on the click of each and every page of the website, rather then having to wait for the server to communicate a new request, is what can make a website really stand out by being a vital upgrade to the user experience.'],
+        rowDescriptionsRegular2: ["React has popularized functional programming in JavaScript. This has led to giant frameworks adopting the Component-based UI pattern that React uses. This project uses declarative programming approaches so that logical computation is executed without full expression of control flow."],
+        rowDescriptionsRegular3: "",
+        contentAddition: ["", "", "", ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnomcodebyob.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnomByob.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnomByob.png"]]
       }]
     }
 

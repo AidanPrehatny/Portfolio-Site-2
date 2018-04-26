@@ -36,17 +36,20 @@ class Projects extends Component {
          {arrayConversion.slice(14, 22)
            .filter(description => description[1].length > 0)
            .map((descrip, index) =>
-
+           <div key={`descrip${descrip[0]}`}>
+             {descrip[1] || p.imageRows[index] ?
               <ProjectListItem
                 rowHeader = {p.rowHeader[index]}
                 rowSubheader = {p.rowSubheader[index]}
                 rowDescription = {descrip[1]}
                 rowImage = {p.imageRows[index]}
                 rowAlternate = {index%2 === 0 ? 'even' : 'odd'}
-                key={`descrip${descrip[0]}`}
                 rowNumber = {index}
                 contentAddition = {p.contentAddition ? p.contentAddition[index] : false}
               />
+              :
+              null}
+            </div>
 
         )}
         </div>

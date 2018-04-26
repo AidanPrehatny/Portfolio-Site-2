@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+
+
 
 class ProjectListItem extends Component {
  state = {
@@ -12,6 +16,7 @@ class ProjectListItem extends Component {
  }
  render() {
   const {rowHeader, rowSubheader, rowDescription, rowNumber, rowAlternate, rowImage, contentAddition} = this.state
+  console.log(typeof contentAddition)
   return (
    <div className="projectRow grid-x align-center align-middle">
     {rowAlternate === 'even' ?
@@ -32,17 +37,24 @@ class ProjectListItem extends Component {
       :
       <p>{rowDescription}</p>
      }
-     {contentAddition ? typeof contentAddition === 'string' ?
-     <video playsInline autoPlay muted loop id="contentAdditionVid" className="cell">
-      <source src={contentAddition} type="video/mp4" />
-      Your browser does not support the video tag.
-     </video>
+     {contentAddition ?  (typeof contentAddition === 'string') ?
+     <img src={contentAddition} />
+     :
+     null
      :
      null  // TODO: the other type of contentAddition will likely be a component that takes in props to define dropzone for gander and byobcontainer for (nomnombyob)
-     :
-     null}
+      }
     </div>
     {rowAlternate === 'odd' ?
+      typeof contentAddition === 'object' ?
+      <div className="cell large-6">
+        <AwesomeSlider >
+          <div data-src={contentAddition[0]} />
+          <div data-src={contentAddition[1]} />
+          <div data-src={contentAddition[2]} />
+        </AwesomeSlider>
+      </div>
+      :
     <div className="cell large-6">
      <img alt={`${rowHeader}img${[rowNumber]}`} src={rowImage} />
     </div>
@@ -54,3 +66,9 @@ class ProjectListItem extends Component {
  }
 }
 export default  ProjectListItem
+
+{/* <video playsInline autoPlay muted loop id="contentAdditionVid" className="cell">
+ <source src={contentAddition} type="video/mp4" />
+ Your browser does not support the video tag.
+</video>
+: */}
