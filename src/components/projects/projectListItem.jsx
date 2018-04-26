@@ -1,27 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const ProjectListItem = (props) => {
-  console.log(props.rowDescription)
-  return (
-    <div>
-      <h2 style={{fontWeight: '600'}}>{props.rowHeader}</h2>
-      <h4>{props.rowSubheader}</h4>
-      {props.rowDescription.length > 3 ?
+class ProjectListItem extends Component {
+  state = {
+    rowHeader: this.props.rowHeader,
+    rowSubheader: this.props.rowSubheader,
+    rowDescription: this.props.rowDescription,
+    rowAlternate: this.props.rowAlternate,
+    rowNumber: this.props.index,
+    rowImage: this.props.rowImage
+  }
+  render() {
+    const {rowHeader, rowSubheader, rowDescription, rowNumber, rowAlternate, rowImage} = this.state
+    console.log(rowDescription)
+    console.log(rowHeader)
+    return (
+      <div className="projectRow grid-x align-center align-middle">
+        {/* {console.log(descrip[1])} */}
+        <div className="cell large-6">
+          <img alt={`${rowHeader}img${[rowNumber]}`} src={rowImage} />
+      </div>
+      <div className="cell large-6 projDescrip">
+        <h2 style={{fontWeight: '600'}}>{rowHeader}</h2>
+      <h4>{rowSubheader}</h4>
+    {rowDescription.length > 1 ?
       <ul>
-          {props.rowDescription.map((bullet,ind) =>
+        {rowDescription.map((bullet,ind) =>
           <li key={ind}>{bullet}</li>
-        )}
-          </ul>
-          :
-        <p>{props.rowDescription}</p>
-      }
-    </div>
-  )
+      )}
+    </ul>
+    :
+    <p>{rowDescription}</p>
+}
+</div>
+</div>
+
+)
+}
 }
 export default  ProjectListItem
-//`p.rowDescriptionsList${[i+1]}` ? `p.rowDescriptionsList${[i+1]}` : `p.DescriptionsRegular${[i+1]}` || null
-
-
-{/* rowDescriptionsList = {p.rowDescriptionsList[i]}
-rowDescriptionsRegular = {p.rowDescriptionsRegular[i]} */}
-{/* `p.rowDescriptionsList${[i+1]}` ? `p.rowDescriptionsList${[i+1]}` : `p.DescriptionsRegular${[i+1]}` || null  */}

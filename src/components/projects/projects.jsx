@@ -9,6 +9,7 @@ class Projects extends Component {
 
     const {p, i, right} = this.props
     console.log(Object.entries(p))
+    let arrayConversion= Object.entries(p)
     return (
       <div className="grid-x" id="projItemContainer" style={{background: p.projectBackground, height: '100%', width: '100%'}}>
         <div className="cell large-5 grid-x align-middle align-center" id="projInfoContainer">
@@ -28,29 +29,27 @@ class Projects extends Component {
         {p.videoUrl ?
           <video playsInline autoPlay muted loop style={{maxHeight:'800px', maxWidth: '400px', minWidth: '50px'}}>
             <source src={p.videoUrl} type="video/mp4" />
-            <source src={p.videoUrl} type="video/ogg" />
+            // <source src={p.videoUrl} type="video/ogg" />
             Your browser does not support the video tag.
           </video> :
           <img alt={`${p.projectHeader}img${i}`} style={{maxHeight: '900px', maxWidth: '900px'}} className="projImg cell" src={p.projectPreview} />}
         </div>
 
-        {/* {p.slice(14, 21).map((descrip, index)
-          <div className="projectRow grid-x align-center align-middle">
-            <div className="cell large-6">
-              <img alt={`${p.rowHeader}img${[i]}`} src={p.imageRows[i]} />
-            </div>
-            <div className="cell large-6 projDescrip">
+         {arrayConversion.slice(14, 22)
+           .filter(description => description[1].length > 0)
+           .map((descrip, index) =>
+
               <ProjectListItem
-                rowHeader = {p.rowHeader[i]}
-                rowSubheader = {p.rowSubheader[i]}
-                rowDescription = {eval(`p.rowDescriptionsList${i}`) ?
-                eval(`p.rowDescriptionsList${i}`)
-                :
-                eval(`p.DescriptionsRegular${i}`)}
+                rowHeader = {p.rowHeader[index]}
+                rowSubheader = {p.rowSubheader[index]}
+                rowDescription = {descrip[1]}
+                rowImage = {p.imageRows[index]}
+                rowalternate = {index%2 == 0 ? 'even' : 'odd'}
+                key={`descrip${descrip[0]}`}
+                rowNumber = {index}
               />
-            </div>
-          </div>
-        )} */}
+
+        )}
         </div>
 
       )
