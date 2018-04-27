@@ -1,6 +1,7 @@
 * {
   font-family: montserrat !important;
   color: white;
+  animation-delay: .5s;
 }
 
 .mainContent {
@@ -51,11 +52,15 @@
 }
 /* Position and sizing of burger button */
 .bm-burger-button {
-  position: fixed;
+  position: absolute;
   width: 36px;
   height: 30px;
   left: 36px;
   top: 36px;
+  @include breakpoint(small only) {
+    left: 10px !important;
+    top: 10px !important;
+  }
 }
 
 /* Color/shape of burger icon bars */

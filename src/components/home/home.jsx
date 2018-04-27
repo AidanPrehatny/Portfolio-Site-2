@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom'
 import { elastic as Menu } from 'react-burger-menu'
 
 
-
 class Home extends Component {
   state = {
     videoURL: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/swirls-OPTIMIZED.mp4'
@@ -21,7 +20,7 @@ class Home extends Component {
          <Link to="/contact" id="contact" className="menu-item">Contact</Link>
         </Menu>
         <main id="page-wrap" className="mainContent">
-          <video autoPlay loop playsInline id="apBackground">
+          <video playsInline autoPlay loop id="apBackground">
             <source src={this.state.videoURL} type="video/mp4" />
           </video>
           <section id="mainPage" className="grid-x align-middle align-center">

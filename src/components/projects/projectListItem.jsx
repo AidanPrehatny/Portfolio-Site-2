@@ -13,31 +13,39 @@ class ProjectListItem extends Component {
   rowAlternate: this.props.rowAlternate,
   rowNumber: this.props.rowNumber,
   rowImage: this.props.rowImage,
-  contentAddition: this.props.contentAddition
+  contentAddition: this.props.contentAddition,
+  rowIcon: this.props.rowIcon,
+  numberOfRows: this.props.numberOfRows
  }
  render() {
-  const {rowHeader, rowSubheader, rowDescription, rowNumber, rowAlternate, rowImage, contentAddition} = this.state
+  const {rowHeader, rowSubheader, rowDescription, rowNumber, rowAlternate, rowImage, contentAddition, rowIcon, numberOfRows} = this.state
   console.log(rowImage)
   return (
-       <LazyLoad debounce={false} offsetVertical={50}>
+       <LazyLoad debounce={false} offsetBottom={250} once onContentVisible={()=> ((rowNumber === 3 && numberOfRows === 4) || (rowNumber === 2 && numberOfRows === 3)  ? document.getElementById("projArrows").classList.add("projArrowVisible"): null)}>
    <div id="lazyLoadin" className=" projectRow grid-x align-center align-middle">
     {rowAlternate === 'even' ?
     <div className="cell large-6 medium 12 small 12 lazySlideInLeft ">
       {rowImage === "" ?
         <InstaCardContainer />
         :
-     <img alt={`${rowHeader}img${[rowNumber]}`} src={rowImage} />
+     <img alt={`${rowHeader}img${[rowNumber]}`} src={rowImage} id={rowImage.endsWith('bentobot.svg') ? 'bentoBot' : ""} />
    }
     </div>
     :
     null}
     <div className="cell large-6 projDescrip">
-     <h2 style={{fontWeight: '600'}}>{rowHeader}</h2>
+     <div style={{display: 'flex', flexDirection: 'row'}}>
+       <img id="rowIcon" src={rowIcon[rowNumber]} alt={`${rowHeader}img${[rowNumber]}`} style={{maxHeight: "55px", margin: '0, paddingRight: 12px'}} />
+       <h2 style={{fontWeight: '600'}}>{rowHeader}</h2>
+     </div>
      <h4>{rowSubheader}</h4>
      {rowDescription.length > 1 ?
       <ul>
        {rowDescription.map((bullet,ind) =>
-        <li key={ind}>{bullet}</li>
+         <span>
+            <li key={ind}>{bullet}</li>
+          <br></br>
+        </span>
        )}
       </ul>
       :

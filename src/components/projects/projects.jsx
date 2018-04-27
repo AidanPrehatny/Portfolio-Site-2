@@ -17,7 +17,8 @@ class Projects extends Component {
             <h3 id="projSubheader" style={{color: p.projectSecondary}} className="projItem" >{p.projectSubheader}</h3>
             <h4 style={{color: p.projectSecondary}} className="projItem" >{p.projectType}</h4>
             {p.visitProject === '' ? null :
-             <a style={{fontWeight: 700, color: p.projectBackground, cursor: 'pointer', margin: '25px 0', background: p.projectSecondary, padding: '12px 12px', borderRadius: '15px', fontSize: '80%'}} className="projItem"  href={p.websiteUrl}>{p.visitProject}</a>}
+             <a target="_blank" style={{fontWeight: 700, color: p.projectBackground, cursor: 'pointer', margin: '25px 0', background: p.projectSecondary, padding: '12px 12px', borderRadius: '15px', fontSize: '80%'}}
+               className="projItem"  href={p.websiteUrl}>{p.visitProject}</a>}
             <p id="projDescription" style={{color: p.projectSecondary}} className="projItem" >{p.projectDescription}</p>
             <svg className="cell" style={{stroke: p.projectPrimary, marginTop: '50px'}} id="learnMore" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 62.33">
             <title>down arrow</title>
@@ -31,7 +32,7 @@ class Projects extends Component {
             <source src={p.videoUrl} type="video/mp4" />
             Your browser does not support the video tag.
           </video> :
-          <img alt={`${p.projectHeader}img${i}`} style={{maxHeight: '900px', maxWidth: '900px'}} className="projImg cell" src={p.projectPreview} />}
+          <img alt={`${p.projectHeader}img${i}`} style={{maxHeight: '790px', maxWidth: '790px'}} className="projImg cell" src={p.projectPreview} />}
         </div>
 
          {arrayConversion.slice(14, 22)
@@ -47,6 +48,8 @@ class Projects extends Component {
                 rowAlternate = {index%2 === 0 ? 'even' : 'odd'}
                 rowNumber = {index}
                 contentAddition = {p.contentAddition ? p.contentAddition[index] : false}
+                rowIcon = {p.rowIcon}
+                numberOfRows = {p.rowHeader.length}
               />
               :
               null}

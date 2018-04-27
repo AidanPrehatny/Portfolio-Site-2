@@ -38,7 +38,8 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular2: ["When properties in the model get updated, so does the UI. In this case, the affiliates button filtering would communicate with its parent component to filter the list of items and then the component would listen for the change to change the color of the button."],
         rowDescriptionsRegular3: ["One of the user challenges in one of the site's features was within the brewery location maps component. The map begins by fetching the data of the first ten nearest geospatial brewery locations and then adds additional locations after the first ten load in to improve user load times when accessing the brewery map. \n \n This is important because loading in all locations at once increases the map’s rendering time and prevent  users from accessing the app altogether, which is far worse than the given alternative."],
         videoUrl: "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/sdbeerGif.mp4",
-        contentAddition: ["","","https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/HOCcarbon.gif",""]
+        contentAddition: ["","","https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/HOCcarbon.gif",""],
+        rowIcon: ["https://i.imgur.com/KxSYPZ8.png", "https://i.imgur.com/OdLPOQ0.png", "https://i.imgur.com/NIolk6Y.png", "https://i.imgur.com/glHZ3vA.png"]
       },
 
       {projectBackground: `linear-gradient(0.25turn, #186E59, #1F8A70)`,
@@ -63,7 +64,8 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular1: ["Concretely, a higher-order component is a function that takes a component and returns a new component. Whereas a component transforms props into UI, a higher-order component transforms a component into another component. The HOC isn’t concerned with how or why the data is used, and the wrapped component isn’t concerned with where the data came from."],
         rowDescriptionsRegular2: "",
         rowDescriptionsRegular3: "",
-        contentAddition: ["", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/HOCcarbon.png", "", ""]
+        contentAddition: ["", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/HOCcarbon.png", "", ""],
+        rowIcon: ["https://i.imgur.com/qG8Dt15.png", "https://i.imgur.com/aSGx7M4.png", "https://i.imgur.com/DjIgnwI.png", "https://i.imgur.com/0xCAzUg.png"]
       },
 
       {projectBackground: `linear-gradient(0.25turn, #300094, #17BEAC)`,
@@ -87,7 +89,8 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular0: "",
         rowDescriptionsRegular1: ["This integrated development env ironment is one in which many processes and tools were coordinated to provide my team and I an orderly interface to build out this full feature site. This tech stack is what made our development  process possible, from writing to testing to packaging our code for use."],
         rowDescriptionsRegular2: ["This mockup generator was a small feature to the site utilizing a drag and drop addition for the user. I used a dropzone react library and added an animation on the Callback prop \"onDrop Accepted\" and \"onDropRejected\" as a user indication of their picture's drop status. "],
-        rowDescriptionsRegular3: ""
+        rowDescriptionsRegular3: "",
+        rowIcon: ["https://i.imgur.com/dRErTmJ.png", "https://i.imgur.com/rMaBTPx.png", "https://i.imgur.com/lcVqUnE.png", ""]
       },
 
       {projectBackground: `linear-gradient(0.25turn, #4F4CB1, #300094)`,
@@ -112,7 +115,8 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular1: "",
         rowDescriptionsRegular2: ["Using Regular Expressions to detect pattern matches on every keypress of book searching. Every keypress in the search input triggers a fetch request to the book storage, the reg exp needed to update accordingly. Taking the searched results and pushing an update of my local book shelves upon categorizing newly discovered books."],
         rowDescriptionsRegular3: "",
-        contentAddition: ["",["https://i.imgur.com/SguSJkm.png","https://i.imgur.com/0t2t0DS.png", "https://i.imgur.com/9iFVIa9.png"],"",""]
+        contentAddition: ["",["https://i.imgur.com/SguSJkm.png","https://i.imgur.com/0t2t0DS.png", "https://i.imgur.com/9iFVIa9.png"],"",""],
+        rowIcon: ["https://i.imgur.com/vmzSsWv.png", "https://i.imgur.com/WuKEQvB.png", "https://i.imgur.com/gF2dV1N.png", "https://i.imgur.com/3FhtK59.png"]
       },
 
       {projectBackground: `#252831`,
@@ -136,7 +140,8 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular0: "",
         rowDescriptionsRegular1: "",
         rowDescriptionsRegular2: ["JavaScript frameworks and Single Page Apps are the way to build today, but its important to understand where it all came from. In 2005, Jesse James Garrett coined the term AJAX to mean “Asynchronous Javascript and XML”. This is essentially the technique of using XMLHTTPRequest to fetch data and then modify the current page. \n In this application, i apply these fundamentals of fetching data for things such as neighborhoods, restaurants, and cuisines with proper error handling." ],
-        rowDescriptionsRegular3: ""
+        rowDescriptionsRegular3: "",
+        rowIcon: ["https://i.imgur.com/MD2kUHb.png", "https://i.imgur.com/R1NiCcf.png", "https://i.imgur.com/HC4XHfp.png"]
       },
 
 
@@ -151,7 +156,7 @@ class ProjectsContainer extends Component {
         projectSecondary: '#F0AC61',
         visitProject: 'VISIT WEBSITE',
         projectLogo: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnom_logo.png',
-        imageRows: ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/NomnomMockup-min.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnombyob.png"],
+        imageRows: ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/NomnomMockup-min.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/nomnombyob.png", "https://s3-us-west-1.amazonaws.com/nomnombento/bentobot.svg"],
         rowHeader: ['Application Properties', 'Process', 'User Considerations', 'Challenges'],
         rowSubheader: ["The following features were requested by the client:"],
         rowDescriptionsList0: ['Build your own Bento box item selection menu', 'Menu items with ingredients listings for each dish', 'Company instagram feeds onto about page,Location page provides map with retail store location'],
@@ -162,11 +167,13 @@ class ProjectsContainer extends Component {
         rowDescriptionsRegular1: ['The Website branding and animation features needed to be interesting but also simple and lend to the user experience in accessible interfacing.Single Page web applications are the future of the web. The instantaneous load-in on the click of each and every page of the website, rather then having to wait for the server to communicate a new request, is what can make a website really stand out by being a vital upgrade to the user experience.'],
         rowDescriptionsRegular2: ["React has popularized functional programming in JavaScript. This has led to giant frameworks adopting the Component-based UI pattern that React uses. This project uses declarative programming approaches so that logical computation is executed without full expression of control flow."],
         rowDescriptionsRegular3: "",
-        contentAddition: ["", "", "", ["https://i.imgur.com/5YllJVQ.jpg", "https://i.imgur.com/G0HFEVM.png", "https://i.imgur.com/94s2B3e.jpg"]]
+        contentAddition: ["", "", "", ["https://i.imgur.com/5YllJVQ.jpg", "https://i.imgur.com/G0HFEVM.png", "https://i.imgur.com/94s2B3e.jpg"]],
+        rowIcon: ["https://i.imgur.com/zkDSD3i.png", "https://i.imgur.com/uflSYus.png", "https://i.imgur.com/4zJripG.png", "https://i.imgur.com/fDapqUA.png"]
       }]
     }
 
     handleProjChange = (iterate, direction, transitionColor) => (e) => {
+      window.scroll(0, 0)
       if (this.state.projectNumber === 5 && direction === true) {
         this.setState({
           projectNumber: 0,
@@ -222,7 +229,9 @@ class ProjectsContainer extends Component {
                           />
                         </svg>
                         <div id="selectedNav" style={{borderRadius: '50px', backgroundImage: `url(${proj.projectLogo})`}} />
-                        <svg className="navItem pulsate" onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))} height="36" width="36">
+                        <svg className="navItem pulsate"
+                          onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))}
+                          height="36" width="36">
                           <polygon points="27.051,17 9.905,0 8.417,1.414 24.674,17.707 8.363,34 9.914,35.414 27.051,18.414"
                             fill={proj.projectSecondary} stroke={proj.projectSecondary} style={{strokeWidth: '3'}}
                           />
@@ -233,6 +242,14 @@ class ProjectsContainer extends Component {
                         p={proj}
                         i={i}
                       />
+                      <div id="projArrows" >
+                        <h1 onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}
+                          className="projArrow" style={{}} >
+                          &#8668; Previous Project</h1>
+                        <h1 onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))}
+                          className="projArrow" style={{color: proj.projectSecondary}} >
+                          Next Project &#8669;</h1>
+                      </div>
                     </section>
                   )}
                 )}
