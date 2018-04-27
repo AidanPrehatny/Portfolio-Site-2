@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
-import { elastic as Menu } from 'react-burger-menu'
+import { pushRotate as Menu } from 'react-burger-menu'
 
 
 class Home extends Component {
@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     return (
       <div id="outer-container">
-        <Menu pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
+        <Menu customCrossIcon={ false } pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
          <Link to="/" id="home" className="menu-item">Home</Link>
          <Link to="/projects" id="projects" className="menu-item">Projects</Link>
          <Link to="/about" id="about" className="menu-item">About</Link>

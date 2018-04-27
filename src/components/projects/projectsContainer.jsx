@@ -197,7 +197,7 @@ class ProjectsContainer extends Component {
       return (
         <div>
           <div id="outer-container">
-            <Menu  pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
+            <Menu customCrossIcon={ false } pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
               <Link to="/" id="home" className="menu-item">Home</Link>
               <Link onClick={() => {
                 this.setState({
@@ -246,18 +246,18 @@ class ProjectsContainer extends Component {
                         <h1 onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}
                           className="projArrow" style={{}} >
                           &#8668; Previous Project</h1>
-                        <h1 onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))}
-                          className="projArrow" style={{color: proj.projectSecondary}} >
-                          Next Project &#8669;</h1>
-                      </div>
-                    </section>
-                  )}
-                )}
-              </main>
-            </div>
-          </div>
-        )
-      }
-    }
+                          <h1 onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))}
+                            className="projArrow" style={{color: proj.projectSecondary}} >
+                            Next Project &#8669;</h1>
+                          </div>
+                        </section>
+                      )}
+                    )}
+                  </main>
+                </div>
+              </div>
+            )
+          }
+        }
 
-    export default ProjectsContainer
+        export default ProjectsContainer
