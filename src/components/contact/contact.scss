@@ -1,22 +1,32 @@
 .contact-form {
-  max-width: 360px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
+  @include breakpoint(large only) {
+    width: 85vw;
+  }
+  color: #4B2F70 !important;
+  margin: auto;
+  width: 100vw;
+ background: -webkit-linear-gradient(#1D2671, #AF3566);
+ -webkit-background-clip: text;
 }
-
 .contact-form > :not(:last-child) {
   margin-bottom: 16px;
 }
-
-.contact-form .form-field {
-  display: flex;
-  flex-direction: column;
+.form-field {
+  width: 100%;
 }
 
 .contact-form .label-content {
   margin-bottom: 4px;
+}
+
+#aboutPanel {
+  color: #4B2F70 !important;
+  height: 100vh;
+  background: #af3566 !important;
+  @include breakpoint(medium down) {
+    margin: 40px;
+    height: auto !important;
+  }
 }
 
 .contact-form input, .contact-form textarea {
@@ -28,4 +38,77 @@
 
 .contact-form label {
   text-align: left;
+}
+
+.label-content {
+   color: #4B2F70;
+   font-size: 28px;
+    font-weight: 700 !important
+}
+
+#sendMe {
+  color: rgb(175, 53, 102) !important;
+  font-weight: 600;
+
+}
+
+input, textarea {
+  border-image-source: linear-gradient(45deg, #1D2671, #AF3566) !important;
+  border-width: 6px !important;
+  border-image-slice: 1 !important;
+  font-weight: 500;
+}
+
+
+input[type=number] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+input[type=number]:focus {
+  box-shadow: 0 0 10px #AF3566;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 2px solid rgba(81, 203, 238, 1);
+}
+
+input[type=email] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+input[type=email]:focus {
+  box-shadow: 0 0 10px #AF3566;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 2px solid rgba(81, 203, 238, 1);
+}
+
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+}
+
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 10px #AF3566;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 2px solid rgba(81, 203, 238, 1);
 }

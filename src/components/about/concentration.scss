@@ -1,0 +1,167 @@
+.gameboard {
+  display: grid;
+  grid-column-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 10px;
+  border-radius: 2%;
+  background: #00b7ff;
+  background: linear-gradient(bottom left,#00b7ff,#ffffc7);
+  background: -webkit-linear-gradient(bottom left,#00b7ff,#ffffc7);
+  background: -moz-linear-gradient(bottom left,#00b7ff,#ffffc7);
+  max-height: 55em;
+  max-width: 55em;
+  margin: auto;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+  supported by Chrome and Opera */
+  filter: drop-shadow(10px 10px 24px #00b7ff);
+}
+.grid-item {
+  border-radius: 25%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: auto;
+}
+img {
+  max-width: 85%;
+  cursor: pointer;
+}
+
+.grey {
+  content: url('https://i.imgur.com/qxyII9X.png');
+}
+h1 {
+  text-align: center;
+}
+#moves {
+  display: inline-block;
+  margin: 0 25px;
+
+}
+.stars {
+  margin: 0;
+
+}
+#replay {
+  background-image: url('../images/Replay.svg');
+  width: 1.3em;
+  height: 1.1em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin-top: .2em;
+}
+#starsnmoves {
+  text-align: center;
+}
+
+
+
+#Layer_1-2 {
+  fill: #333;
+}
+
+#innerStar{
+  fill: #333;
+}
+
+#Layer_1-3 {
+  fill: #333;
+}
+
+#innerStar1{
+  fill: #333;
+}
+#Layer_1-4 {
+  fill: #333;
+}
+
+#innerStar2{
+  fill: #333;
+}
+h2 {
+  text-align: center;
+  font-family: Dosis;
+  font-size: 2em;
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+#logo {
+  display:block;
+  position: relative;
+  margin: auto;
+  width: 448px;
+}
+
+#moves {
+  font-family: Dosis;
+}
+
+#starsnmoves {
+  animation-duration: 1s;
+  animation-delay: 2s;
+}
+
+
+
+
+@media screen and (min-width : 551px)
+{
+  text {
+    font-size: 4.8em;
+  }
+}
+
+@media screen and (max-width : 360px)
+{
+  #moves
+  {
+    font-size: 1.2em !important;
+  }
+}
+@media screen and (min-width : 768px)
+{
+  h1 {
+    font-size: 3em;
+  }
+  #moves
+  {
+    font-size: 1.3em;
+  }
+  #replay {
+    width: 1.3em;
+  }
+  .stars {
+    width: 1.6em;
+  }
+}
+@media screen and (min-width : 1040px)
+{
+  h1 {
+    font-size: 3.5em;
+  }
+  #moves
+  {
+    font-size: 1.6em;
+  }
+  #replay {
+    width: 1.3em;
+  }
+  .stars {
+    width: 1em;
+  }
+}
+@media screen and (max-width : 550px)
+{
+  #logo
+  {
+    width: 280px;
+  }
+  text
+  {
+    font-size: 2.7em !important;
+  }
+}

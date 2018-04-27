@@ -16,7 +16,7 @@ class Home extends Component {
          <Link to="/" id="home" className="menu-item">Home</Link>
          <Link to="/projects" id="projects" className="menu-item">Projects</Link>
          <Link to="/about" id="about" className="menu-item">About</Link>
-         <Link to="/blog" id="blog" className="menu-item">Blog</Link>
+         <a target="_blank" rel='noreferrer noopener' className="menu-item"  href="http://enomer.edublogs.org/">Blog</a>
          <Link to="/contact" id="contact" className="menu-item">Contact</Link>
         </Menu>
         <main id="page-wrap" className="mainContent">
