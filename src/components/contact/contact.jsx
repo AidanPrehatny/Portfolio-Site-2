@@ -2,6 +2,12 @@ import React from 'react'
 import { pushRotate as Menu } from 'react-burger-menu'
 import {Link} from 'react-router-dom'
 
+
+
+
+
+
+
   const ContactForm = () => (
     <div id="outer-container" className="mainContent" style={{background: 'white', height: '100vh', width: '100vw'}}>
       <Menu style={{color: 'purple'}} customCrossIcon={ false } pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
@@ -24,7 +30,9 @@ import {Link} from 'react-router-dom'
         </div>
       </div>
       <div className="grid-x" style={{padding: '3em'}}>
-        <form className="contact-form"  method="none">
+
+
+        <form className="contact-form"  method="post" >
           <div className="form-field">
             <label htmlFor="name" className="grid-x align-middle">
               <div className="label-content cell large-4">Hi My Name is:</div>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ProjectListItem from './projectListItem'
-
-
+import { AwesomeButton } from 'react-awesome-button';
 
 class Projects extends Component {
 
@@ -17,8 +16,9 @@ class Projects extends Component {
             <h3 id="projSubheader" style={{color: p.projectSecondary}} className="projItem" >{p.projectSubheader}</h3>
             <h4 style={{color: p.projectSecondary}} className="projItem" >{p.projectType}</h4>
             {p.visitProject === '' ? null :
-            <a target="_blank" style={{fontWeight: 700, color: p.projectBackground, cursor: 'pointer', margin: '25px 0', background: p.projectSecondary, padding: '12px 12px', borderRadius: '15px', fontSize: '80%'}}
-              className="projItem"  href={p.websiteUrl}>{p.visitProject}</a>}
+            <AwesomeButton bubbles size="medium" type="primary" target="_blank"
+              // style={{fontWeight: 700, color: p.projectBackground, cursor: 'pointer', margin: '25px 0', background: p.projectSecondary, padding: '12px 12px', borderRadius: '15px', fontSize: '80%'}}
+              className="projItem"  href={p.websiteUrl}>{p.visitProject}</AwesomeButton>}
               <p id="projDescription" style={{color: p.projectSecondary}} className="projItem" >{p.projectDescription}</p>
               <svg className="cell" style={{stroke: p.projectPrimary, marginTop: '50px'}} id="learnMore" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 62.33">
               <title>down arrow</title>
