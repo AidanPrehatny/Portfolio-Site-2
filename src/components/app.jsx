@@ -21,26 +21,10 @@ class App extends Component {
     return (
 			<div>
         <Switch>
-          {/* <Route exact path="/login" component={Login} />
-          <Route exact path="/register" component={Register} /> */}
           <Route exact path="/" component={Home} />
           <Route path="/projects" component={ProjectsContainer}/>
-           <Route path="/about" component={About}/>
-          {/* <Route path="/blog" component={Blog}/> */}
+          <Route path="/about" component={About}/>
           <Route path="/contact" component={Contact}/>
-          {/* <Route render={()=>
-            <AuthContainer key="authcontainer">
-              <ServeContainer>
-                <Switch >
-                  <Route exact path="/articles/new" component={ArticlesContainer} />
-                  <Route exact path="/articles/:id" component={ArticleDetails} />
-                  <Route path="/articles" component={ArticlesContainer} />
-                  <Route render={()=><div><b>404</b></div>} />
-                </Switch>
-              </ServeContainer>
-            </AuthContainer>
-          }>
-          </Route> */}
         </Switch>
 
       </div>

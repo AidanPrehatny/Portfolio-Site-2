@@ -20,9 +20,10 @@
 }
 
 #aboutPanel {
-  color: #4B2F70 !important;
-  height: 100vh;
-  background: #af3566 !important;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
   @include breakpoint(medium down) {
     margin: 40px;
     height: auto !important;
@@ -47,20 +48,31 @@
 }
 
 #sendMe {
-  color: rgb(175, 53, 102) !important;
   font-weight: 600;
-
+  background: none;
+  color: white;
+  -webkit-appearance: none !important;
 }
 
-input, textarea {
+#sendMe:focus {
+  border: none;
+  outline: none;
+}
+
+.contactInput , textarea {
   border-image-source: linear-gradient(45deg, #1D2671, #AF3566) !important;
   border-width: 6px !important;
   border-image-slice: 1 !important;
   font-weight: 500;
 }
 
+input[type=submit] {
+    background-color: #4CAF50;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
 
-input[type=number] {
+.contactInput[type=number] {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -70,14 +82,14 @@ input[type=number] {
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }
-input[type=number]:focus {
+.contactInput[type=number]:focus {
   box-shadow: 0 0 10px #AF3566;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 2px solid rgba(81, 203, 238, 1);
 }
 
-input[type=email] {
+.contactInput[type=email] {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -87,7 +99,7 @@ input[type=email] {
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }
-input[type=email]:focus {
+.contactInput[type=email]:focus {
   box-shadow: 0 0 10px #AF3566;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
@@ -95,7 +107,7 @@ input[type=email]:focus {
 }
 
 
-input[type=text], textarea {
+.contactInput[type=text], textarea {
   -webkit-transition: all 0.30s ease-in-out;
   -moz-transition: all 0.30s ease-in-out;
   -ms-transition: all 0.30s ease-in-out;
@@ -106,7 +118,7 @@ input[type=text], textarea {
   border: 1px solid #DDDDDD;
 }
 
-input[type=text]:focus, textarea:focus {
+.contactInput[type=text]:focus, textarea:focus {
   box-shadow: 0 0 10px #AF3566;
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;

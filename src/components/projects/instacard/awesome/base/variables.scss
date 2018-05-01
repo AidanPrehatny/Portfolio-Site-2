@@ -1,29 +1,29 @@
 $button-root: "aws-btn";
 
-$button-default-height: 42px;
-$button-default-font-size: 20px;
-$button-default-line-height: 24px;
+$button-default-height: 48px;
+$button-default-font-size: 16px;
+$button-default-line-height: 20px;
 $button-default-border-radius: 8px;
 $button-default-placeholder-width: 120px;
 $button-default-placeholder-font-color: rgba(0, 0, 0, 0.1);
 
 $button-font-family: inherit;
-$button-font-color: yellow;
+$button-font-color: black;
 $button-font-weight: 400;
 $button-font-style: normal;
-$button-hover-darken-opacity: 0.13;
+$button-hover-darken-opacity: 0.2;
 $button-letter-spacing: 0.2px;
-$button-horizontal-padding: 16px;
+$button-horizontal-padding: 13px;
 
-$button-raise-level: 5.5px;
-$button-hover-pressure: 2;
+$button-raise-level: 6px;
+$button-hover-pressure: 2.3;
 
 $button-icon-width: 44px;
 $button-small-width: 88px;
-$button-medium-width: 136px;
+$button-medium-width: 148px;
 $button-large-width: 192px;
 
-$button-color-primary: #4F4CB1;
+$button-color-primary: #444;
 $button-color-secondary: #afafaf;
 $button-color-disabled: #9E9E9E;
 $button-color-placeholder: #BABABA;

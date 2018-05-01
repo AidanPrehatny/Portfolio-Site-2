@@ -28,7 +28,11 @@ app.use(bodyParser.json());
 
 app.post('/contact', (req, res) => {
   // setup email data with unicode symbols
+
+    console.log(req.body)
+    console.log(req.body.name)
   let mailOptions = {
+
       from: 'foo', // sender address
       to: 'aprehot@gmail.com', // list of receivers
       subject: `New Message from ${req.body.name}`, // Subject line
@@ -59,7 +63,3 @@ app.get('*',(req,res)=>{
 const server = app.listen(config.port, () => {
   console.log('app listening on', config.port);
 });
-
-
-
-console.log("my email is: " + process.env.EMAIL_PASS)

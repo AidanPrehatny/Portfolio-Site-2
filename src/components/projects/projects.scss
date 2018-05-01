@@ -53,6 +53,7 @@
 }
 #projDescription {
   font-size: 16px;
+  font-weight: 500;
 }
 #lazyLoadin {
   animation: fadeIn 1s ease-in;
@@ -69,6 +70,7 @@
 }
 #projItemContainer {
   padding: 0 5rem;
+  width: 100vw;
   @include breakpoint(small only) {
     padding: 0 .5rem;
   }
@@ -94,8 +96,7 @@
 }
 
 .projectRow {
-  min-height: 200vh;
-  min-width: 80vw;
+  min-height: 120vh;
   @include breakpoint(medium down){
     margin: 100px 0;
   }

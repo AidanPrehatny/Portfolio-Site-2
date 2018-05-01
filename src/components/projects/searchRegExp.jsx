@@ -45,7 +45,9 @@ class SearchRegExp extends Component {
               this.inputDetect(event.target.value)}}
             />
         {bookInfo.map((book, i) =>
-          <img key={`book${i}`} alt={`book${i}`} src={book.bookImg} className="cell large-3 medium-4 small-5" style={{height: '220px', padding: '5px 2px '}}/>
+          <img key={`book${i}`} alt={`book${i}`}
+            src={book.bookImg} className="cell large-3 medium-4 small-5"
+            style={{height: '220px', width: '150px', padding: '5px 2px '}}/>
         )}
       </div>
     )

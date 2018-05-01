@@ -24,9 +24,15 @@ class About extends Component {
               <div data-src="https://i.imgur.com/59Gptr9.jpg" />
             </AwesomeSlider>
           </div>
-
-          <div id="aboutPanel" className="cell large-4" style={{padding: '35px 75px', borderRadius: '10px 0 0 10px'}}>
-              <p className="cell" style={{fontSize: '14px', fontWeight: '700', color: '#4B2F70'}}>
+          <div className="grid-x cell large-4 align-middle align-center" style={{height: '100vh',   background: '#af3566', borderRadius: '10px 0 0 10px'}} >
+            <div
+              id="aboutPanel"
+              className=" cell"
+              style={{padding: '35px'}}>
+              <h2 style={{textAlign: 'center', flex: '1 0 100%', fontWeight: '700', padding: '25px'}} className="">About Me</h2>
+              <p
+                className=""
+                style={{fontSize: '14px', fontWeight: '700', color: 'white', flex: '1 0 100%'}}>
                 I specialize in Users. From Interface to Experience, my goal
                 lies in creating things that just work. I develop pixel based
                 solutions for Front End Mobile and Web applications using
@@ -49,7 +55,7 @@ class About extends Component {
                 with my design skills as i identify simple solutions allowing
                 for users to focus on task and not tool.
               </p>
-
+            </div>
           </div>
         </main>
       </div>

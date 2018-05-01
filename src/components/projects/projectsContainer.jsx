@@ -4,12 +4,19 @@ import { elastic as Menu } from 'react-burger-menu'
 import {Link} from 'react-router-dom'
 
 
+
+
 class ProjectsContainer extends Component {
+
   constructor(props){
     super(props)
     this.handleProjChange = this.handleProjChange.bind(this)
   }
-  state= {
+
+
+
+
+  state = {
     right: true,
     currentProjColor: 'rgb(24, 110, 89)',
     projectNumber: 0,
@@ -172,6 +179,9 @@ class ProjectsContainer extends Component {
       }]
     }
 
+
+
+
     handleProjChange = (iterate, direction, transitionColor) => (e) => {
       window.scroll(0, 0)
       if (this.state.projectNumber === 5 && direction === true) {
@@ -192,6 +202,7 @@ class ProjectsContainer extends Component {
       }
       this.setState({currentProjColor: this.state.projects[transitionColor].projectPrimary})
     }
+
 
     render() {
       return (
@@ -241,6 +252,7 @@ class ProjectsContainer extends Component {
                       <Projects
                         p={proj}
                         i={i}
+                        right={this.state.right}
                       />
                       <div id="projArrows" >
                         <h1 onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}

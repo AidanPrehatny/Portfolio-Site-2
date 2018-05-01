@@ -11,10 +11,31 @@ class InstaCardContainer extends Component {
     name: '',
     liked: false,
     imagePreviewUrl: '',
-    imageProfileUrl: ''
+    imageProfileUrl: '',
+    inputChar: '',
+    caption: ''
   }
 
   changeInstaCardState = newState => this.setState( newState )
+
+  inputDetect = (query) => {
+    this.setState({ inputChar: query })
+  }
+
+  inputCaption = (quer) => {
+    this.setState({ caption: quer })
+  }
+
+  resetImg() {
+    this.changeInstaCardState({
+      name: '',
+      liked: false,
+      imagePreviewUrl: '',
+      imageProfileUrl: '',
+      inputChar: '',
+      caption: ''
+    })
+  }
 
   handleImageChange(e) {
     let reader = new FileReader();
@@ -47,7 +68,7 @@ class InstaCardContainer extends Component {
 
   render() {
 
-    const {name, caption, liked, imagePreviewUrl, imageProfileUrl} = this.state
+    const {name, liked, imagePreviewUrl, imageProfileUrl} = this.state
     return (
       <div className="cell text-center">
         <div className="instaCard grid-x align-middle align-center">
@@ -57,9 +78,14 @@ class InstaCardContainer extends Component {
             imageProfileUrl={imageProfileUrl}
             handleImageChange={this.handleImageChange}
             liked={liked}
+            caption = {this.state.caption}
             name={name}
-            caption={caption}
-            changeInstaCardState = {this.changeInstaCardState} />
+            changeInstaCardState = {this.changeInstaCardState}
+            resetImg = {this.resetImg}
+            inputDetect = {this.inputDetect}
+            inputChar = {this.state.inputChar}
+            inputCaption = {this.inputCaption}
+          />
           </div>
         </div>
       )
