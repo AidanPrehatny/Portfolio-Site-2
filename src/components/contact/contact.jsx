@@ -4,45 +4,38 @@ import {Link} from 'react-router-dom'
 import { AwesomeButtonProgress } from 'react-awesome-button';
 
 
-
-
-
-
 class Contact extends Component {
 
   state= {
-        contactFinished: false
+    contactFinished: false
   }
 
-
-    contactDone(next) {
-
-      this.setState({contactFinished: true})
-      let formInfo = {
-        name: document.getElementById('formName').value,
-        email: document.getElementById('formEmail').value,
-        number: document.getElementById('formNumber').value,
-        'message large-3': document.getElementById('formMessage').value,
-      }
-      const myRequest = new Request('/contact',
-      {
-        method: 'POST',
-        body: JSON.stringify(formInfo),
-        headers: {
-          'content-type': 'application/json'
-        },
-      });
-      fetch(myRequest)
-      .then((succ,err) => {
-        next()
-        console.log(err)
-      })
-
+  contactDone(next) {
+    this.setState({contactFinished: true})
+    let formInfo = {
+      name: document.getElementById('formName').value,
+      email: document.getElementById('formEmail').value,
+      number: document.getElementById('formNumber').value,
+      'message large-3': document.getElementById('formMessage').value,
     }
+    const myRequest = new Request('/contact',
+    {
+      method: 'POST',
+      body: JSON.stringify(formInfo),
+      headers: {
+        'content-type': 'application/json'
+      },
+    });
+    fetch(myRequest)
+    .then((succ,err) => {
+      next()
+    })
+
+  }
 
   render() {
     return (
-      <div id="outer-container" className="mainContent" style={{background: 'white', height: '100vh', width: '100vw'}}>
+      <div id="outer-container" className="mainContact">
         <Menu style={{color: 'purple'}} customCrossIcon={ false } pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
           <Link to="/" id="home" className="menu-item">Home</Link>
           <Link onClick={() => {
@@ -65,7 +58,7 @@ class Contact extends Component {
       <div className="grid-x" style={{padding: '3em'}}>
 
 
-        <form className="contact-form"  method="post" >
+        <form className="contact-form" >
           <div className="form-field">
             <label htmlFor="name" className="grid-x align-middle">
               <div className="label-content cell large-4">Hi My Name is:</div>
@@ -94,27 +87,28 @@ class Contact extends Component {
             </label>
           </div>
 
-          <AwesomeButtonProgress
-            type="primary"
-            progress={true}
-            loadingLabel="Wait..."
-            successLabel="Success!"
-            bubbles={true}
-            disabled = {!this.state.contactFinished ? true : false}
-            action={(element, next) => this.contactDone(next)}
-            >
-              Send Me!
-          </AwesomeButtonProgress>
-          {this.state.contactFinished ?
-          <h4>I'll get back to you shortly.</h4>
-          :
-          null}
+          <div className={this.state.contactFinished ? 'progShow' : 'progHide'}>
+            <AwesomeButtonProgress
+              type="primary"
+              progress={true}
+              loadingLabel="Wait..."
+              successLabel="Success!"
+              bubbles={true}
+              action={(element, next) => this.contactDone(next)}
+              >
+                Send Me!
+              </AwesomeButtonProgress>
+            </div>
+            {this.state.contactFinished ?
+              <h4 style={{fontWeight: '600'}}>Thanks! I'll get back to you shortly.</h4>
+              :
+              null}
 
-    </form>
-  </div>
-</div>
-)
-}
-}
+            </form>
+          </div>
+        </div>
+      )
+    }
+  }
 
-export default Contact
+  export default Contact

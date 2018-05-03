@@ -19,7 +19,7 @@ class Home extends Component {
          <a target="_blank" rel='noreferrer noopener' className="menu-item"  href="http://enomer.edublogs.org/">Blog</a>
          <Link to="/contact" id="contact" className="menu-item">Contact</Link>
         </Menu>
-        <img  src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Artboard+1.png" className="mobileImg show-for-small-only" id="mobileImg" />
+        <img alt="mobileBackgroundImage" src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Artboard+1.png" className="mobileImg show-for-small-only" id="mobileImg" />
         <main id="page-wrap" className="mainContent">
           <video className="hide-for-small-only" style={{ background: '#af3566'}} playsInline autoPlay loop id="apBackground">
             <source src={this.state.videoURL} type="video/mp4" />

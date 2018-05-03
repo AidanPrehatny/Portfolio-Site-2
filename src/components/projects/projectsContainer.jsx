@@ -90,7 +90,7 @@ class ProjectsContainer extends Component {
         rowDescriptionsList2: "",
         rowDescriptionsList3: "",
         rowDescriptionsRegular0: "",
-        rowDescriptionsRegular1: ["This integrated development env ironment is one in which many processes and tools were coordinated to provide my team and I an orderly interface to build out this full feature site. This tech stack is what made our development  process possible, from writing to testing to packaging our code for use."],
+        rowDescriptionsRegular1: ["This integrated development environment is one in which many processes and tools were coordinated to provide my team and I an orderly interface to build out this full feature site. This tech stack is what made our development  process possible, from writing to testing to packaging our code for use."],
         rowDescriptionsRegular2: ["This mockup generator was a small feature to the site utilizing a drag and drop addition for the user. I used a dropzone react library and added an animation on the Callback prop \"onDrop Accepted\" and \"onDropRejected\" as a user indication of their picture's drop status. "],
         rowDescriptionsRegular3: "",
         rowIcon: ["https://i.imgur.com/dRErTmJ.png", "https://i.imgur.com/rMaBTPx.png", "https://i.imgur.com/lcVqUnE.png", ""]
@@ -99,7 +99,7 @@ class ProjectsContainer extends Component {
       {projectBackground: `linear-gradient(0.25turn, #4F4CB1, #300094)`,
         projectHeader: 'Book Tracking App',
         projectSubheader: 'Online Book Finder and Categorizer',
-        projectType: 'Person Project',
+        projectType: 'Personal Project',
         websiteUrl: 'https://book-categorizer.herokuapp.com',
         projectDescription: 'In this Book tracking mini app, users select and categorize books they have read, are currently reading, or want to read. The project emphasized using React to build the application and provides an API server and client library persists information as the application is interacted with.',
         projectPreview: 'https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Book+track+OPTIMIZED.png',
@@ -110,7 +110,7 @@ class ProjectsContainer extends Component {
         imageRows: ["https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/book+track+app.png", null, "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/booksAPI.png"],
         rowHeader: ['Application Properties', 'Challenges', 'User Considerations', 'Value Proposition'],
         rowSubheader: ["Features of my app include:", "User Centered development considerations were as follows:"],
-        rowDescriptionsList0: ["Categorizing: Add Books from an online repository to your categories list and save them for later viewing, pushing changes to backend store with tokenizer.","React Routing:   Small List of reviews of restaraunts within Manhattan, New York, retrieving data of restaraunts, neighborhood, and google map markers with xhr api requests.", "Book Repository: Retrieves data including restaraunt address, hours, cusinie type, pictures, and review.", "Live Search Filter: Initializes a google map and places restaraunt map markers onto the map."],
+        rowDescriptionsList0: ["Categorizing: Add Books from an online repository to your categories list and save them for later viewing, pushing changes to backend store with tokenizer.","React Routing:   Small List of reviews of restaurants within Manhattan, New York, retrieving data of restaurants, neighborhood, and google map markers with xhr api requests.", "Book Repository: Retrieves data including restaurant address, hours, cusinie type, pictures, and review.", "Live Search Filter: Initializes a google map and places restauraunt map markers onto the map."],
         rowDescriptionsList1: ["Ensuring that the search box updates its books results as the user types in each letter", "Simple User interface to navigate the book tracking environment by keeping a maximum of three books per row on large screens", "Search button becomes Home button instead of using a back button, the user can navigate to the search page by using the /search url extension", "The user’s search input is cached when returning to home page in case they want to continue their search where they left off" ],
         rowDescriptionsList2: "",
         rowDescriptionsList3: ["A major takeaway was improving my methods of overviewing documentation. The foursquare API was a bit difficult for me to understand in how to format my fetch request, but upon further research, I figured out how to give my fetch calls a more readable and organized format.", "I Encoded the URI using encodeURI() to convert all characters that are not permissible in a URL and turn them into allowable units; those query strings are required by the places API parameters."],
@@ -123,7 +123,7 @@ class ProjectsContainer extends Component {
       },
 
       {projectBackground: `#252831`,
-        projectHeader: 'Restaraunt Reviews App',
+        projectHeader: 'Restaurant Reviews App',
         projectSubheader: 'Native Javascript Web Application',
         projectType: 'Personal Project',
         websiteUrl: '',
@@ -136,8 +136,8 @@ class ProjectsContainer extends Component {
         imageRows: [`https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/restaurantReviews.gif`,"https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/serviceWorker.png", "https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/XHR+Request.png"],
         rowHeader: ['Application Properties', 'Offline First', 'Solutions'],
         rowSubheader: ["Features of my app include:"],
-        rowDescriptionsList0: ["Reviews: Small List of reviews of restaraunts within Manhattan, New York, retrieving data of restaraunts, neighborhood, and google map markers with xhr api requests.", "Restaraunt Information: Retrieves data including restaraunt address, hours, cusinie type, pictures, and review.", "Map: Initializes a google map and places restaraunt map markers onto the map.", "Service Workers: This type of web worker intercepts network requests as the bowsre makes them, caching data and using later to give the user instant offline data in the event of bad network connection preventing a refresh, like a twitter feed."],
-        rowDescriptionsList1: ["It's a pattern you have seen on multiple social networking sites, you load your news feed, and returned to you is a blank white screen. The problem isnt that your offline, the problem lies in that one bar connection, that Lie-Fi.  Connection Limbo. This is why offline first is a great experience technique to offer the user, this offline first technique i use will register a service worker to get data on your screen using stuff already cached on your device.", "A list of local resources we always want to be cached.", "The install handler takes care of precaching the resources we always need.", "The activate handler takes care of cleaning up old caches.", "The fetch handler serves responses for same-origin resources from a cache.", "If no response is found, it populates the runtime cache with the response from the network before returning it to the page."],
+        rowDescriptionsList0: ["Reviews: Small List of reviews of restaurants within Manhattan, New York, retrieving data of restaurants, neighborhood, and google map markers with xhr api requests.", "Restaurant Information: Retrieves data including restaurant address, hours, cusinie type, pictures, and review.", "Map: Initializes a google map and places restaurant map markers onto the map.", "Service Workers: This type of web worker intercepts network requests as the bowsre makes them, caching data and using later to give the user instant offline data in the event of bad network connection preventing a refresh, like a twitter feed."],
+        rowDescriptionsList1: ["It's a pattern you may have seen on native apps, you start up your app, but the screen stays white. The problem isnt that your offline, its that cheeky little one bar connection, that Lie-Fi. This is why an offline first approach is a great experience technique to offer the user, registering a service worker in the users browser cache. Offline first is a key charactertistic in modern Progressive Web Applications, i wanted to build a service worker from scratch despite its configuration typically prepackaged in bundles suck as create-react-app. Geting data on the user's screen is top priority, and using stuff already cached on your device is a great way to deliver.\n \n Here are a few steps I followed in achieving this goal:", "A list of local resources we always want to be cached is stored in the array.", "The install handler takes care of precaching the resources we always need.", "The activate handler takes care of cleaning up old caches.", "The fetch handler serves responses for same-origin resources from a cache.", "If no response is found, it populates the runtime cache with the response from the network before returning it to the page."],
         rowDescriptionsList2: "",
         rowDescriptionsList3: "",
         rowDescriptionsRegular0: "",
@@ -198,8 +198,11 @@ class ProjectsContainer extends Component {
       }
       this.setState({currentProjColor: this.state.projects[transitionColor].projectPrimary})
       setTimeout(()=> {
-        this.setState({currentProjColor: transitionColor > 0 ? this.state.projects[this.state.projectNumber].projectBackground : 'linear-gradient(0.65turn, rgb(209, 190, 146), rgb(255, 175, 0))'})}
-        , 1000)
+        this.setState({currentProjColor: this.state.projectNumber > 0 ?
+          this.state.projects[this.state.projectNumber].projectBackground
+          :
+          'linear-gradient(0.65turn, rgb(209, 190, 146), rgb(255, 175, 0))'})}
+        , 500)
       }
 
 
@@ -230,7 +233,10 @@ class ProjectsContainer extends Component {
                     return (
                       <section
                         key={proj.projectHeader}
-                        style={{background: proj.projectBackground, position:'relative', animation: `slideIn${this.state.right ? 'Right' : 'Left'} ease-out .5s`}}>
+                        style={{background: proj.projectBackground, position:'relative', animation: `slideIn${this.state.right ?
+                           'Right'
+                           :
+                           'Left'} ease-out .5s`}}>
                         <div id="projNav">
                           <svg className="navItem pulsate"
                             onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}

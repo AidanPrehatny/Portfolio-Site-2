@@ -3,6 +3,9 @@ import {Link} from 'react-router-dom'
 import { pushRotate as Menu } from 'react-burger-menu'
 import AwesomeSlider from 'react-awesome-slider';
 import AwsSliderStyles from './AwsSliderStyles.scss';
+import { AwesomeButton} from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css'
+
 
 class About extends Component {
   render() {
@@ -56,12 +59,42 @@ class About extends Component {
                 with my design skills as i identify simple solutions allowing
                 for users to focus on task and not tool.
               </p>
-            </div>
-          </div>
-        </main>
-      </div>
-    )
-  }
-}
+              <div id="smiAbout">
+                <AwesomeButton
+                  type="gplus"
+                  size="icon"
+                  href="https://codepen.io/Enomer/"
+                  target="_"
+                  >
+                    <img alt="codepenLogo" className="smiLogo"
+                      src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/codepen-logo.svg" />
+                  </AwesomeButton>
+                  <AwesomeButton
+                    size="icon"
+                    type="linkedin"
+                    href="https://www.linkedin.com/in/aidanprehatny/"
+                    target="_"
+                    >
+                      <img alt="codepenLogo" className="smiLogo"
+                        src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/linkedin.svg" />
+                    </AwesomeButton>
+                    <AwesomeButton
+                      size="icon"
+                      type="github"
+                      href="https://github.com/Enomer"
+                      target="_"
+                      >
+                        <img alt="codepenLogo" className="smiLogo"
+                          src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/githubLogo.svg" />
+                      </AwesomeButton>
 
-export default About
+                    </div>
+                  </div>
+                </div>
+              </main>
+            </div>
+          )
+        }
+      }
+
+      export default About

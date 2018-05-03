@@ -73,7 +73,7 @@
     "start": "node server.js",
     "dev": "node scripts/start.js",
     "serve": "PORT=3001 nodemon server.js",
-    "build": "node scripts/build.js",
+    "build": "cross-env GENERATE_SOURCEMAP=false node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "postinstall": "npm run build"
   },
@@ -117,5 +117,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4"
   }
 }

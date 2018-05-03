@@ -1,7 +1,6 @@
 * {
   font-family: montserrat !important;
   color: white;
-  // animation-delay: .5s;
 }
 
 .mainContent {
@@ -12,6 +11,15 @@
   @include breakpoint(medium down) {
     background: #312c73
   }
+}
+.mainContact {
+    animation: slideInLeft ease-out .7s;
+    background: white;
+    width: 100vw;
+    padding-top: 17px;
+    @include breakpoint(medium up) {
+      height: 100vh;
+    }
 }
 
 #apBackground {
@@ -26,8 +34,9 @@
 .mobileImg {
   position: absolute;
   z-index: -1;
-  max-height: 100vh;
-  height: 100vh;
+  max-height: 140vh;
+  height: 140vh;
+  min-width: 120vw;
 }
 #mainPage {
   padding: 0 40px 40px 40px;
@@ -81,7 +90,9 @@
 .bm-burger-bars {
   background: #af3566 !important;
   @include breakpoint(small only) {
-    background: radial-gradient( white, #af3566 ) !important;
+    background: #af3566 !important;
+    border: solid 1.2px white !important;
+    outline: white;
   }
 }
 

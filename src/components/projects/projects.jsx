@@ -12,7 +12,7 @@ class Projects extends Component {
     let arrayConversion= Object.entries(p)
     return (
       <div className="animated fadeIn grid-x align-center" id="projItemContainer" style={{background: p.projectBackground}}>
-        <div style={{maxWidth: '1440px', height: '100%', width: '100%'}} className="cell grid-x align-center">
+        <div id="projectMainDiv" className="cell grid-x align-center">
           <div className="cell large-5 grid-x align-middle align-center" id="projInfoContainer">
             <div className="cell" style={{padding: '0 0 70px 0', margin: 0, animation: `slideIn${right ? 'Left' : 'Right'} ease-out 1s`}}>
               <h1 id="projHeader" style={{color: p.projectPrimary}} className="projItem" >{p.projectHeader}</h1>
@@ -25,13 +25,18 @@ class Projects extends Component {
 
             </div>
           </div>
-          <div className="cell grid-x large-7 align-middle align-center" id="projImgContainer" style={{animation: `slideIn${right ? 'Right' : 'Left'} ease-out 1s`}}>
+          <div
+            id="projImgContainer"
+            className="cell grid-x large-7 align-middle align-center"
+            style={{animation: `slideIn${right ? 'Right' : 'Left'} ease-out 1s`}}>
             {p.videoUrl ?
               <video playsInline autoPlay muted loop id="vidPreview" >
                 <source src={p.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
               </video> :
-              <img alt={`${p.projectHeader}img${i}`} style={{maxHeight: '790px', maxWidth: '790px'}} className="projImg cell" src={p.projectPreview} />}
+              <img alt={`${p.projectHeader}img${i}`}
+                style={{maxHeight: '790px', maxWidth: '790px'}}
+                className="projImg cell" src={p.projectPreview} />}
             </div>
 
             {arrayConversion.slice(14, 22)
