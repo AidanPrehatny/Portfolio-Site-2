@@ -12,24 +12,7 @@ class Contact extends Component {
 
   contactDone(next) {
     this.setState({contactFinished: true})
-    let formInfo = {
-      name: document.getElementById('formName').value,
-      email: document.getElementById('formEmail').value,
-      number: document.getElementById('formNumber').value,
-      'message large-3': document.getElementById('formMessage').value,
-    }
-    const myRequest = new Request('/contact',
-    {
-      method: 'POST',
-      body: JSON.stringify(formInfo),
-      headers: {
-        'content-type': 'application/json'
-      },
-    });
-    fetch(myRequest)
-    .then((succ,err) => {
-      next()
-    })
+
 
   }
 
@@ -58,7 +41,7 @@ class Contact extends Component {
       <div className="grid-x" style={{padding: '3em'}}>
 
 
-        <form className="contact-form" >
+        <form className="contact-form" method="post" >
           <div className="form-field">
             <label htmlFor="name" className="grid-x align-middle">
               <div className="label-content cell large-4">Hi My Name is:</div>
@@ -96,6 +79,29 @@ class Contact extends Component {
               bubbles={true}
               action={(element, next) => this.contactDone(next)}
               >
+                <a
+                  onClick={(e) => {
+                  e.preventDefault()
+                  let formInfo = {
+                    name: document.getElementById('formName').value,
+                    email: document.getElementById('formEmail').value,
+                    number: document.getElementById('formNumber').value,
+                    'message large-3': document.getElementById('formMessage').value,
+                  }
+                  const myRequest = new Request('/contact',
+                  {
+                    method: 'POST',
+                    body: JSON.stringify(formInfo),
+                    headers: {
+                      'content-type': 'application/json'
+                    },
+                  });
+                  fetch(myRequest)
+                  .then((succ,err) => {
+                  })
+                }}>
+
+              </a>
                 Send Me!
               </AwesomeButtonProgress>
             </div>
