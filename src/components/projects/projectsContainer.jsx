@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Projects from './projects';
-import { elastic as Menu } from 'react-burger-menu'
-import {Link} from 'react-router-dom'
-
-
+import { elastic as Menu } from 'react-burger-menu';
+import {Link} from 'react-router-dom';
 
 
 class ProjectsContainer extends Component {
@@ -12,8 +10,6 @@ class ProjectsContainer extends Component {
     super(props)
     this.handleProjChange = this.handleProjChange.bind(this)
   }
-
-
 
 
   state = {
@@ -201,75 +197,79 @@ class ProjectsContainer extends Component {
         })
       }
       this.setState({currentProjColor: this.state.projects[transitionColor].projectPrimary})
-    }
+      setTimeout(()=> {
+        this.setState({currentProjColor: transitionColor > 0 ? this.state.projects[this.state.projectNumber].projectBackground : 'linear-gradient(0.65turn, rgb(209, 190, 146), rgb(255, 175, 0))'})}
+        , 1000)
+      }
 
 
-    render() {
-      return (
-        <div>
-          <div id="outer-container">
-            <Menu customCrossIcon={ false } pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
-              <Link to="/" id="home" className="menu-item">Home</Link>
-              <Link onClick={() => {
-                this.setState({
-                  projectNumber: 0
-                })
-              }
-            } to="/projects" id="projects" className="menu-item">Projects</Link>
-            <Link to="/about" id="about" className="menu-item">About</Link>
-            <a target="_blank" rel='noreferrer noopener' className="menu-item"  href="http://enomer.edublogs.org/">Blog</a>
-            <Link to="/contact" id="contact" className="menu-item">Contact</Link>
-          </Menu>
+      render() {
+        return (
+          <div>
+            <div id="outer-container">
+              <Menu customCrossIcon={ false } pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
+                <Link to="/" id="home" className="menu-item">Home</Link>
+                <Link onClick={() => {
+                  this.setState({
+                    projectNumber: 0
+                  })
+                }
+              } to="/projects" id="projects" className="menu-item">Projects</Link>
+              <Link to="/about" id="about" className="menu-item">About</Link>
+              <a target="_blank" rel='noreferrer noopener' className="menu-item"  href="http://enomer.edublogs.org/">Blog</a>
+              <Link to="/contact" id="contact" className="menu-item">Contact</Link>
+            </Menu>
 
 
-          <main id="page-wrap" style={{zIndex: -1, position: 'absolute',  height:'300vh', backgroundColor: this.state.currentProjColor }}>
-            {this.state.projects
-              .filter(p => this.state.projects
-                .indexOf(p) === this.state.projectNumber)
-                .map((proj, i) => {
-                  return (
-                    <section
-                      key={proj.projectHeader}
-                      style={{background: proj.projectBackground, position:'relative', animation: `slideIn${this.state.right ? 'Right' : 'Left'} ease-out .5s`}}>
-                      <div id="projNav">
-                        <svg className="navItem pulsate"
-                          onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}
-                          height="36" width="36">
-                          <polygon points="0 17 17.15 0 18.63 1.41 2.38 17.71 18.69 34 17.14 35.41 0 18.41 0 17"
-                            fill={proj.projectSecondary} stroke={proj.projectSecondary} style={{strokeWidth: '3'}}
-                          />
-                        </svg>
-                        <div id="selectedNav" style={{borderRadius: '50px', backgroundImage: `url(${proj.projectLogo})`}} />
-                        <svg className="navItem pulsate"
-                          onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))}
-                          height="36" width="36">
-                          <polygon points="27.051,17 9.905,0 8.417,1.414 24.674,17.707 8.363,34 9.914,35.414 27.051,18.414"
-                            fill={proj.projectSecondary} stroke={proj.projectSecondary} style={{strokeWidth: '3'}}
-                          />
+            <main id="page-wrap"
+              style={{zIndex: -1, position: 'absolute',  height:'300vh', background: this.state.currentProjColor }}>
+              {this.state.projects
+                .filter(p => this.state.projects
+                  .indexOf(p) === this.state.projectNumber)
+                  .map((proj, i) => {
+                    return (
+                      <section
+                        key={proj.projectHeader}
+                        style={{background: proj.projectBackground, position:'relative', animation: `slideIn${this.state.right ? 'Right' : 'Left'} ease-out .5s`}}>
+                        <div id="projNav">
+                          <svg className="navItem pulsate"
+                            onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}
+                            height="36" width="36">
+                            <polygon points="0 17 17.15 0 18.63 1.41 2.38 17.71 18.69 34 17.14 35.41 0 18.41 0 17"
+                              fill={proj.projectSecondary} stroke={proj.projectSecondary} style={{strokeWidth: '3'}}
+                            />
+                          </svg>
+                          <div id="selectedNav" style={{borderRadius: '50px', backgroundImage: `url(${proj.projectLogo})`}} />
+                          <svg className="navItem pulsate"
+                            onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))}
+                            height="36" width="36">
+                            <polygon points="27.051,17 9.905,0 8.417,1.414 24.674,17.707 8.363,34 9.914,35.414 27.051,18.414"
+                              fill={proj.projectSecondary} stroke={proj.projectSecondary} style={{strokeWidth: '3'}}
+                            />
 
-                        </svg>
-                      </div>
-                      <Projects
-                        p={proj}
-                        i={i}
-                        right={this.state.right}
-                      />
-                      <div id="projArrows" >
-                        <h1 onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}
-                          className="projArrow" style={{}} >
-                          &#8668; Previous Project</h1>
-                          <h1 onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))}
-                            className="projArrow" style={{color: proj.projectSecondary}} >
-                            Next Project &#8669;</h1>
-                          </div>
-                        </section>
+                          </svg>
+                        </div>
+                        <Projects
+                          p={proj}
+                          i={i}
+                          right={this.state.right}
+                        />
+                        <div id="projArrows" >
+                          <h1 onClick={this.handleProjChange(-1,false, this.state.projects.indexOf(proj))}
+                            className="projArrow" style={{}} >
+                            &#8668; Previous Project</h1>
+                            <h1 onClick={this.handleProjChange(1,true, this.state.projects.indexOf(proj))}
+                              className="projArrow" style={{color: proj.projectSecondary}} >
+                              Next Project &#8669;</h1>
+                            </div>
+                          </section>
+                        )}
                       )}
-                    )}
-                  </main>
+                    </main>
+                  </div>
                 </div>
-              </div>
-            )
+              )
+            }
           }
-        }
 
-        export default ProjectsContainer
+          export default ProjectsContainer

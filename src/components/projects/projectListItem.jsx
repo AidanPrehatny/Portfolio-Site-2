@@ -7,7 +7,7 @@ import LazyLoad from 'react-lazy-load';
 
 
 
-window.onload = function() {
+window.onload = () => {
   document.body.onmousewheel = function(e) {
     if (e.target.id === 'el') return;
     e.preventDefault();
@@ -30,8 +30,8 @@ class ProjectListItem extends Component {
     numberOfRows: this.props.numberOfRows
   }
 
+
   componentDidMount() {
-     window.scrollTo( 0, 0);
      setTimeout(() => document.body.onmousewheel = null, 600)
    }
   componentWillUnmount() {

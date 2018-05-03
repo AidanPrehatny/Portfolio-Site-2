@@ -17,6 +17,10 @@ import Contact from './contact/contact'
 
 
 class App extends Component {
+
+
+
+
   render() {
     return (
 			<div>

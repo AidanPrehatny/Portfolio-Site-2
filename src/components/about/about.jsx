@@ -15,8 +15,8 @@ class About extends Component {
           <a target="_blank" rel='noreferrer noopener' className="menu-item"  href="http://enomer.edublogs.org/">Blog</a>
           <Link to="/contact" id="contact" className="menu-item">Contact</Link>
         </Menu>
-        <main id="page-wrap" className="mainContent grid-x align-center align-middle">
-          <div className="cell large-8" style={{maxHeight: '730px', padding: '15px'}}>
+        <main id="page-wrap" className="mainAbout grid-x align-center align-middle">
+          <div id="aboutSlider" className="cell large-8" style={{maxHeight: '730px', padding: '15px'}}>
             <AwesomeSlider cssModule={AwsSliderStyles}>
               <div data-src="https://i.imgur.com/MLzV7zb.jpg" />
               <div data-src="https://i.imgur.com/fQzHmQF.jpg" />
@@ -24,11 +24,12 @@ class About extends Component {
               <div data-src="https://i.imgur.com/59Gptr9.jpg" />
             </AwesomeSlider>
           </div>
-          <div className="grid-x cell large-4 align-middle align-center" style={{height: '100vh',   background: '#af3566', borderRadius: '10px 0 0 10px'}} >
+          <div
+            id="aboutContainer"
+            className="grid-x cell large-4 align-middle align-center" >
             <div
               id="aboutPanel"
-              className=" cell"
-              style={{padding: '35px'}}>
+              className=" cell">
               <h2 style={{textAlign: 'center', flex: '1 0 100%', fontWeight: '700', padding: '25px'}} className="">About Me</h2>
               <p
                 className=""

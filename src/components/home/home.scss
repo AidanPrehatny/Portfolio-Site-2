@@ -5,27 +5,29 @@
 }
 
 .mainContent {
-  	animation: slideInLeft ease-out .7s;
+  animation: slideInLeft ease-out .7s;
 }
+.mainAbout {
+  animation: slideInLeft ease-out .7s;
+  @include breakpoint(medium down) {
+    background: #312c73
+  }
+}
+
 #apBackground {
- position: fixed;
- right: 0;
- bottom: 0;
- min-width: 100%;
- min-height: 100%;
- z-index: -1;
- @include breakpoint(small only) {
-   max-width: 1000px;
-   max-height: 1000px;
-   margin-left: -250px;
-   -webkit-transform: rotate(90deg);
-   -moz-transform: rotate(90deg);
-   -o-transform: rotate(90deg);
-   -ms-transform: rotate(90deg);
-   transform: rotate(90deg);
-   right: auto;
-   bottom: auto;
- }
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.mobileImg {
+  position: absolute;
+  z-index: -1;
+  max-height: 100vh;
+  height: 100vh;
 }
 #mainPage {
   padding: 0 40px 40px 40px;
@@ -39,19 +41,19 @@
   color: white;
   font-size: 58px;
   @include breakpoint(small only) {
-   font-size: 40px;
+    font-size: 40px;
   }
 }
 
 #vidPreview {
- max-height: 800px;
- max-width: 400px;
- min-width: 50px;
- margin: auto;
- display: flex;
- @include breakpoint(small only) {
-  max-width: 90vw;
- }
+  max-height: 800px;
+  max-width: 400px;
+  min-width: 50px;
+  margin: auto;
+  display: flex;
+  @include breakpoint(small only) {
+    max-width: 90vw;
+  }
 }
 .menu-item:hover {
   opacity: 0.5
@@ -77,7 +79,10 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #af3566 !important
+  background: #af3566 !important;
+  @include breakpoint(small only) {
+    background: radial-gradient( white, #af3566 ) !important;
+  }
 }
 
 
@@ -94,10 +99,7 @@
   height: 48px !important;
   width: 48px !important;
 }
-/* Color/shape of close button cross */
-.bm-cross {
-  background: #af3566 !important;
-}
+
 
 /* General sidebar styles */
 .bm-menu {
@@ -131,4 +133,28 @@
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+#aboutContainer {
+  height: 100vh;
+  background: #af3566;
+  border-radius: 10px 0 0 10px;
+  @include breakpoint(medium down) {
+    height: auto;
+    border-radius: 10px;
+    margin: 2rem;
+  }
+}
+#aboutPanel {
+  padding: 35px;
+  @include breakpoint(medium down) {
+    padding: 0 35px !important;
+    margin: 0 !important;
+  }
+}
+#aboutSlider {
+  @include breakpoint(small only) {
+    padding:60px 0 !important;
+    width: 100vw !important
+  }
 }
