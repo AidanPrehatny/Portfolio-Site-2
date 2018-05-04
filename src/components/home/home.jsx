@@ -21,7 +21,7 @@ class Home extends Component {
         </Menu>
         <img alt="mobileBackgroundImage" src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/Artboard+1.png" className="mobileImg show-for-small-only" id="mobileImg" />
         <main id="page-wrap" className="mainContent">
-          <video className="hide-for-small-only" style={{ background: '#af3566'}} playsInline autoPlay loop id="apBackground">
+          <video className="hide-for-small-only" style={{ background: '#af3566'}} playsInline muted autoPlay loop id="apBackground">
             <source src={this.state.videoURL} type="video/mp4" />
           </video>
           <section id="mainPage" className="grid-x align-middle align-center">

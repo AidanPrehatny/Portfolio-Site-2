@@ -14,7 +14,7 @@ class ProjectsContainer extends Component {
 
   state = {
     right: true,
-    currentProjColor: 'rgb(24, 110, 89)',
+    currentProjColor: 'linear-gradient(0.65turn, rgb(209, 190, 146), rgb(255, 175, 0))',
     projectNumber: 0,
     projects: [
 

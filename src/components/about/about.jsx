@@ -4,7 +4,6 @@ import { pushRotate as Menu } from 'react-burger-menu'
 import AwesomeSlider from 'react-awesome-slider';
 import AwsSliderStyles from './AwsSliderStyles.scss';
 import { AwesomeButton} from 'react-awesome-button';
-import 'react-awesome-button/dist/styles.css'
 
 
 class About extends Component {
@@ -23,7 +22,7 @@ class About extends Component {
             <AwesomeSlider cssModule={AwsSliderStyles}>
               <div data-src="https://i.imgur.com/MLzV7zb.jpg" />
               <div data-src="https://i.imgur.com/fQzHmQF.jpg" />
-              <video playsInline autoPlay loop data-src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/aboutvegasvid.mp4" />
+              <video playsInline autoPlay muted loop data-src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/aboutvegasvid.mp4" />
               <div data-src="https://i.imgur.com/59Gptr9.jpg" />
             </AwesomeSlider>
           </div>
