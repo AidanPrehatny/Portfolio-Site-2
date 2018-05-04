@@ -47,8 +47,9 @@ class ProjectListItem extends Component {
     const {rowHeader, rowSubheader, rowDescription, rowNumber, rowAlternate, rowImage, contentAddition, rowIcon, numberOfRows} = this.state
     return (
       <LazyLoad
+        offsetBottom={50}
         debounce={false}
-        throttle={350}
+        throttle={300}
         once onContentVisible={()=>
           ((rowNumber === 3 && numberOfRows === 4) || (rowNumber === 2 && numberOfRows === 3)  ?
           document.getElementById("projArrows").classList.add("projArrowVisible"): null)}>
