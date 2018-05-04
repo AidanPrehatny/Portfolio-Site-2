@@ -209,7 +209,7 @@ class ProjectsContainer extends Component {
       render() {
         return (
           <div>
-            <div id="outer-container">
+            <div id="outer-container" className="ballGame">
               <Menu customCrossIcon={ false } pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
                 <Link to="/" id="home" className="menu-item">Home</Link>
                 <Link onClick={() => {

@@ -22,7 +22,7 @@ class About extends Component {
             <AwesomeSlider cssModule={AwsSliderStyles}>
               <div data-src="https://i.imgur.com/MLzV7zb.jpg" />
               <div data-src="https://i.imgur.com/fQzHmQF.jpg" />
-              <video playsInline autoPlay muted loop data-src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/aboutvegasvid.mp4" />
+              <video playsInline autoPlay muted={true} loop data-src="https://s3-us-west-1.amazonaws.com/nomnombento/temporaryAidan/aboutvegasvid.mp4" />
               <div data-src="https://i.imgur.com/59Gptr9.jpg" />
             </AwesomeSlider>
           </div>

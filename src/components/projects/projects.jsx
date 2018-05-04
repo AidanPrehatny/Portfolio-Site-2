@@ -30,7 +30,7 @@ class Projects extends Component {
             className="cell grid-x large-7 align-middle align-center"
             style={{animation: `slideIn${right ? 'Right' : 'Left'} ease-out 1s`}}>
             {p.videoUrl ?
-              <video playsInline autoPlay muted loop id="vidPreview" >
+              <video playsInline autoPlay muted={true} loop id="vidPreview" >
                 <source src={p.videoUrl} type="video/mp4" />
                 Your browser does not support the video tag.
               </video> :

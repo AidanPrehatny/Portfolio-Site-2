@@ -2,7 +2,11 @@
   font-family: montserrat !important;
   color: white;
 }
-
+.ballGame {
+  @include breakpoint(small only) {
+    overflow: hidden;
+  }
+}
 .mainContent {
   animation: slideInLeft ease-out .7s;
 }
@@ -37,6 +41,9 @@
   max-height: 140vh;
   height: 140vh;
   min-width: 120vw;
+  @include breakpoint(small only) {
+    margin-left: -25px;
+  }
 }
 #mainPage {
   padding: 0 40px 40px 40px;

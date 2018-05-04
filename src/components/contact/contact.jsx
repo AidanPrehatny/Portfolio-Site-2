@@ -100,29 +100,6 @@ handleSubmit() {
               bubbles={true}
               action={(element, next) => this.contactDone(next)}
               >
-                {/* <a
-                  onClick={(e) => {
-                  e.preventDefault()
-                  let formInfo = {
-                    name: document.getElementById('formName').value,
-                    email: document.getElementById('formEmail').value,
-                    number: document.getElementById('formNumber').value,
-                    'message large-3': document.getElementById('formMessage').value,
-                  }
-                  const myRequest = new Request('/contact',
-                  {
-                    method: 'POST',
-                    body: JSON.stringify(formInfo),
-                    headers: {
-                      'content-type': 'application/json'
-                    },
-                  });
-                  fetch(myRequest)
-                  .then((succ,err) => {
-                  })
-                }}>
-
-              </a> */}
                 Send Me!
               </AwesomeButtonProgress>
             </div>

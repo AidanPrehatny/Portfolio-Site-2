@@ -26,7 +26,6 @@ class SearchRegExp extends Component {
       const match = new RegExp(escapeRegExp(inputChar), 'i')    // reg exp finds pattern to match side pane places with search box
       bookInfo = bookNumbers.filter(
         (book) => {
-          console.log(book.bookName)
           return (
           match.test(book.bookName)
       )})
