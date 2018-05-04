@@ -4,6 +4,11 @@ const mongoose = require('mongoose')
 const app = express()
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const httpsRedirect = require('express-https-redirect');
+app.use('/', httpsRedirect());
+
+
+
 // Body Parser Middleware
 // create reusable transporter object using the default SMTP transport
 const transporter = nodemailer.createTransport({
@@ -15,6 +20,7 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASS
     }
 });
+
 
 
 mongoose.connect(config.mongoUri,{useMongoClient:true});
