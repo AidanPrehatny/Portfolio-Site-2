@@ -81,7 +81,7 @@ class About extends Component {
                     <AwesomeButton
                       size="icon"
                       type="github"
-                      href="https://github.com/Enomer"
+                      href="https://github.com/aidanprehatny"
                       target="_"
                       >
                         <img alt="codepenLogo" className="smiLogo"
