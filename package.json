@@ -1,5 +1,6 @@
 {
-  "name": "gander-marketing",
+  "name": "Portfolio-Site-2",
+  "homepage": "http://AidanPrehatny.github.io/Portfolio-Site-2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -74,7 +75,7 @@
     "start": "node server.js",
     "dev": "node scripts/start.js",
     "serve": "PORT=3001 nodemon server.js",
-    "build": "cross-env GENERATE_SOURCEMAP=false node scripts/build.js",
+    "deploy": "cross-env GENERATE_SOURCEMAP=false node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "postinstall": "npm run build"
   },
