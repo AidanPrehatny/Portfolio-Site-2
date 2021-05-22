@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app'
-import registerServiceWorker from './registerServiceWorker';
+//import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter } from 'react-router-dom'
 
 import thunk from 'redux-thunk'
@@ -22,4 +22,4 @@ ReactDOM.render(
     </BrowserRouter>
   </Provider>
     ,document.getElementById('root'));
-registerServiceWorker();
+//registerServiceWorker();
